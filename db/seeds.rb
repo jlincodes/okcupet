@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
+User.create({ username: 'drogon', password: 'password',
+  email: "drogon123@email.com", organization: false,
+  img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/0/00/Drogon_2x10.jpg/revision/latest/scale-to-width-down/603?cb=20160726064359",
+  location: "San Francisco", summary: "cute but dangerous" })
+
+User.create({ username: 'rhaegal', password: 'password',
+  email: "rhaegal123@email.com", organization: false,
+  img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/c/c4/Rhaegal_1x10.jpg/revision/latest?cb=20160720030915",
+  location: "San Francisco", summary: "cute but dangerous" })
+
+User.create({ username: 'viserion', password: 'password',
+  email: "viserion123@email.com", organization: false,
+  img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/d/d5/Viserion_2x10.jpg/revision/latest/scale-to-width-down/170?cb=20160720030947",
+  location: "San Francisco", summary: "cute but dangerous" })
+  

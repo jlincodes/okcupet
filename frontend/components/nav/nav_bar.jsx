@@ -46,7 +46,7 @@ class NavBar extends React.Component {
   // demo guest login
   handleGuest(e) {
     e.preventDefault();
-    this.props.login({ username: 'drogon', password: 'password123' });
+    this.props.login({ username: 'drogon', password: 'password' });
   }
 
   render() {
