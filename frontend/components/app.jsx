@@ -8,12 +8,14 @@ import {
 } from 'react-router-dom';
 
 import NavBarContainer from './nav/nav_bar_container';
+import {AuthRoute } from '../util/route_util';
 
 const App = () => (
   <div>
     <header>
       <NavBarContainer />
     </header>
+
 
   </div>
 );
