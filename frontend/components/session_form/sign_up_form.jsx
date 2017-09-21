@@ -68,7 +68,7 @@ class SignUpForm extends React.Component {
 
               <br />
               <button className="sign-up-button" type="submit">Sign Up</button>
-              <p className="auth-errors">{this.renderErrors()}</p>
+              <div className="auth-errors">{this.renderErrors()}</div>
             </form>
           </div>
         </div>
