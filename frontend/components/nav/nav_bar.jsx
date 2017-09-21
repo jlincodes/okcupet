@@ -13,7 +13,8 @@ const customStyles = {
     right : 'auto',
     bottom : 'auto',
     marginRight : '-50%',
-    transform : 'translate(-50%, -50%)'
+    transform : 'translate(-50%, -50%)',
+    border: '1px solid #3260c7'
   }
 };
 
@@ -73,7 +74,7 @@ class NavBar extends React.Component {
                 onRequestClose={this.closeModal}
                 style={customStyles}
                 contentLabel="Login Modal"
-                >
+              >
                 <LoginFormContainer />
               </Modal>
           </div>

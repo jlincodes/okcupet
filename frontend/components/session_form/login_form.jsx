@@ -29,44 +29,41 @@ class LoginForm extends React.Component {
     });
   }
 
-  // renderErrors() {
-  //   return(
-  //     <ul>
-  //       {this.props.errors.map((error,idx) => (
-  //         <li key={`error-${idx}`}>{error}</li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error,idx) => (
+          <li key={`error-${idx}`}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
 
-  // {this.renderErrors()}
 
   render () {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <h3>Login</h3>
+        <div className="login-form-wrapper">
+          <h3>Log In:</h3>
 
-          <br />
+          <form className="login-form" onSubmit={this.handleSubmit}>
+            <br />
+              <input type="text"
+                value={this.state.username}
+                placeholder="Username"
+                onChange={this.update('username')} />
+            <br />
 
-        <label>Username:
-            <input type="text"
-              value={this.state.username}
-              placeholder="Username"
-              onChange={this.update('username')} />
-          </label>
-          <br />
-          <label>Password:
-            <input type="password"
-              value={this.state.password}
-              placeholder="Password"
-              onChange={this.update('password')} />
-          </label>
+              <input type="password"
+                value={this.state.password}
+                placeholder="Password"
+                onChange={this.update('password')} />
 
-          <br />
-          <input type="submit" value="Log In" />
-
-        </form>
+            <br />
+            <button className="login-form-button" type="submit">Log In</button>
+            <p className="auth-errors">{this.renderErrors()}</p>
+          </form>
+        </div>
       </div>
     );
   }

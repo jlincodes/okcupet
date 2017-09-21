@@ -13,7 +13,9 @@ import {AuthRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <NavBarContainer />
+      <div className="nav">
+        <NavBarContainer />
+      </div>
     </header>
 
 
