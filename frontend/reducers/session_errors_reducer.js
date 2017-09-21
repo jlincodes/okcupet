@@ -4,6 +4,7 @@ import merge from 'lodash/merge';
 const _nullErrors = [];
 
 const SessionErrorsReducer = (state = [], action) => {
+  
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ERRORS:
