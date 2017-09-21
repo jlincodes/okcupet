@@ -19,6 +19,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  margin: auto;
 }
 
 .nav {
@@ -101,7 +102,8 @@ body {
   height: 400px;
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 100px 0 100px;
 }
 
 .homepage-desc {
@@ -168,4 +170,9 @@ body {
   font-size: 14px;
   line-height: 15px;
   color: red;
+}
+
+.auth-errors ul {
+  list-style: none;
+  padding: 0px;
 }
