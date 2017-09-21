@@ -13,3 +13,97 @@
  *= require_tree .
  *= require_self
  */
+
+#root {
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-bar {
+  background-color: #4fc5d0;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px 0px 100px;
+}
+
+.login-button {
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #4fc5d0;
+}
+
+.demo-button {
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #4fc5d0;
+}
+
+.homepage {
+  background-color: #4fc5d0;
+  color: white;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.homepage-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-text-heading {
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 62px;
+  font-family: 'GT America',sans-serif;
+}
+
+.top-text-p {
+  font-size: 23px;
+  line-height: 31px;
+  width: 490px;
+  font-family: 'GT America',sans-serif;
+  font-weight: normal;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 50px 0px 50px;
+}
+
+.signup-form-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sign-up-button {
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 1px solid #3260c7;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #3260c7;
+}
