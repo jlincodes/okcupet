@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 
-import GreetingContainer from '../greeting/greeting_container';
+// import GreetingContainer from '../greeting/greeting_container';
 import SignUpFormContainer from '../session_form/sign_up_form_container';
 import LoginFormContainer from '../session_form/login_form_container';
 
@@ -36,10 +36,13 @@ class NavBar extends React.Component {
   // modal
 
   openModal() {
+    // clearErrors does not work :(
+    // this.props.clearErrors();
     this.setState({modalIsOpen: true});
   }
 
   closeModal() {
+    // this.props.clearErrors();
     this.setState({modalIsOpen: false});
   }
 
@@ -50,11 +53,11 @@ class NavBar extends React.Component {
   }
 
   render() {
-    if (this.props.loggedIn) {
-      return (
-        <GreetingContainer />
-      );
-    } else {
+    // if (this.props.loggedIn) {
+    //   return (
+    //     <GreetingContainer />
+    //   );
+    // } else {
       return (
         <div>
           <div>
@@ -85,7 +88,7 @@ class NavBar extends React.Component {
           </div>
         </div>
       );
-    }
+
   }
 }
 

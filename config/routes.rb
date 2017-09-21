@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'pets/create'
+
+  get 'pets/destroy'
+
+  get 'pets/index'
+
+  get 'pets/show'
+
   root "static_pages#root"
 
   namespace :api do

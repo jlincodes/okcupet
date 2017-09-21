@@ -7,23 +7,26 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBarContainer from './nav/nav_bar_container';
-import LoginFormContainer from './session_form/login_form_container';
-import SignUpFormContainer from './session_form/sign_up_form_container';
+import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
   <div>
     <header>
       <div className="nav">
-        <NavBarContainer />
       </div>
     </header>
 
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    <AuthRoute path="/signup" component={SignUpFormContainer} />
+    <Switch>
+      <AuthRoute exact path="/" component={NavBarContainer} />
+      <AuthRoute exact path="/signup" component={NavBarContainer} />
+      <ProtectedRoute path='/index' component={GreetingContainer} />
+      <Route path='/' component={() => <Redirect to='/index' />} />
+    </Switch>
 
   </div>
 );
+// <NavBarContainer />
 
 export default App;
