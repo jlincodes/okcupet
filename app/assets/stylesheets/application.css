@@ -192,3 +192,8 @@ body {
 .pets-list li {
   margin: 10px;
 }
+
+.pet-list img {
+  height: 220px;
+  width: 220px;
+}

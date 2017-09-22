@@ -31,7 +31,7 @@ class NavBar extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
-    // this.clearErrors = this.props.clearErrors.bind(this);
+    this.clearErrors = this.props.clearErrors.bind(this);
     // console.log(this.props);
   }
 
@@ -45,10 +45,12 @@ class NavBar extends React.Component {
     // console.log("open", this.props);
     // clearErrors does not work :(
     this.setState({modalIsOpen: true});
+    this.clearErrors();
   }
 
   closeModal() {
     // console.log(this.clearErrors);
+    this.clearErrors();
     this.setState({modalIsOpen: false});
   }
 

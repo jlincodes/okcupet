@@ -6,7 +6,10 @@ const PostIndexItem = (props) => {
   return (
     <li>
       <div>
-        <img src="http://skypaws.net/wp-content/uploads/2016/02/kitten.jpg" alt={pet.name} />
+        <img
+          className="pet-img"
+          src="http://skypaws.net/wp-content/uploads/2016/02/kitten.jpg"
+          alt={pet.name} />
       </div>
       <div>{pet.name}</div>
       <div>Age: {pet.age} &middot; {pet.location}</div>
