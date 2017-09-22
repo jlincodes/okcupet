@@ -14,7 +14,7 @@ class PetIndex extends React.Component {
   render () {
     return (
       <div>
-        <GreetingContainer />
+        <NavContainer />
         <div className="matches-index">
           <h2>Here are some OK pets...</h2>
           <div className="filter-sort-wrapper">filter and sort by placeholder</div>
