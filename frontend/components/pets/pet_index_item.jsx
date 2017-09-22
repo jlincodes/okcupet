@@ -3,8 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 
 const PostIndexItem = (props) => {
   const pet = props.pet;
-  console.log("pet props:", props.pet);
-  console.log("pet id's:", props.pet.id);
   return (
     <li>
       <div className="match-wrapper">
