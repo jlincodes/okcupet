@@ -25,6 +25,8 @@ User.create({ username: 'viserion', password: 'password',
 
 Pet.destroy_all
 
-Pet.create!(name: "breakfast", animal_type: "cat", age: 1, img_url: "http://placekitten.com/200/200", location: "San Francisco", user_id: 1)
-Pet.create(name: "markov", animal_type: "cat", age: 1, img_url: "http://placekitten.com/200/200", location: "San Francisco", user_id: 2)
-Pet.create(name: "jeff", animal_type: "cat", age: 1, img_url: "http://placekitten.com/200/200", location: "San Francisco", user_id: 3)
+user_ids = User.all.map { |user| user.id }
+
+Pet.create!(name: "breakfast", animal_type: "cat", age: 1, img_url: "http://placekitten.com/200/200", location: "San Francisco", user_id: user_ids[0])
+Pet.create(name: "markov", animal_type: "cat", age: 1, img_url: "http://placekitten.com/200/200", location: "San Francisco", user_id: user_ids[1])
+Pet.create(name: "jeff", animal_type: "cat", age: 1, img_url: "http://placekitten.com/200/200", location: "San Francisco", user_id: user_ids[2])
