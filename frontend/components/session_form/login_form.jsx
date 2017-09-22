@@ -6,21 +6,29 @@ class LoginForm extends React.Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      // errors: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+  }
+
+  componentDidMount() {
+    // this.setState({ errors: this.props.errors });
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
+    // this.setState({ errors: [] });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.login(user);
+      // .fail( resp => this.setState( {errors: resp.responseJSON} ));
   }
 
   update(field) {

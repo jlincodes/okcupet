@@ -4,7 +4,7 @@ import PetIndex from './pet_index';
 import { fetchAllPets } from '../../actions/pet_actions';
 
 const mapStateToProps = (state) => ({
-  pets: Object.values
+  pets: Object.values(state.pets)
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -176,3 +176,19 @@ body {
   list-style: none;
   padding: 0px;
 }
+
+.pet-index {
+  text-align: center;
+}
+
+.pets-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding-left: 0px;
+  min-width: 1000px;
+}
+
+.pets-list li {
+  margin: 10px;
+}

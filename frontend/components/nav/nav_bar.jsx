@@ -31,18 +31,24 @@ class NavBar extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
+    // this.clearErrors = this.props.clearErrors.bind(this);
+    // console.log(this.props);
   }
 
+  // componentWillUnmount() {
+  //   this.clearErrors();
+  //   console.log("unmount");
+  // }
   // modal
 
   openModal() {
+    // console.log("open", this.props);
     // clearErrors does not work :(
-    // this.props.clearErrors();
     this.setState({modalIsOpen: true});
   }
 
   closeModal() {
-    // this.props.clearErrors();
+    // console.log(this.clearErrors);
     this.setState({modalIsOpen: false});
   }
 
@@ -53,42 +59,36 @@ class NavBar extends React.Component {
   }
 
   render() {
-    // if (this.props.loggedIn) {
-    //   return (
-    //     <GreetingContainer />
-    //   );
-    // } else {
-      return (
+    return (
+      <div>
         <div>
+          <div className="nav-bar">
+            <p className="logo">OKCuPet!</p>
+            <p className="auth">
+              Already a member?&nbsp;
+              <button className="login-button" onClick={ this.openModal }>
+                Log In</button>&nbsp;
+              <button className="demo-button" onClick={ this.handleGuest }>
+                Demo</button>
+            </p>
+
+            <Modal
+              isOpen={this.state.modalIsOpen}
+              onAfterOpen={this.afterOpenModal}
+              onRequestClose={this.closeModal}
+              style={customStyles}
+              contentLabel="Login Modal"
+            >
+              <LoginFormContainer />
+            </Modal>
+        </div>
+
           <div>
-            <div className="nav-bar">
-              <p className="logo">OKCuPet!</p>
-              <p className="auth">
-                Already a member?&nbsp;
-                <button className="login-button" onClick={ this.openModal }>
-                  Log In</button>&nbsp;
-                <button className="demo-button" onClick={ this.handleGuest }>
-                  Demo</button>
-              </p>
-
-              <Modal
-                isOpen={this.state.modalIsOpen}
-                onAfterOpen={this.afterOpenModal}
-                onRequestClose={this.closeModal}
-                style={customStyles}
-                contentLabel="Login Modal"
-              >
-                <LoginFormContainer />
-              </Modal>
-          </div>
-
-            <div>
-              <SignUpFormContainer />
-            </div>
+            <SignUpFormContainer />
           </div>
         </div>
-      );
-
+      </div>
+    );
   }
 }
 

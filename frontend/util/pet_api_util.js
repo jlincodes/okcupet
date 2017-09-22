@@ -1,7 +1,7 @@
 export const fetchAllPets = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/pets'
+    url: `api/pets`
   })
 );
 
