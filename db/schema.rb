@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20170921215504) do
 
   create_table "pets", force: :cascade do |t|
     t.string "name", null: false
-    t.string "type", null: false
+    t.string "animal_type", null: false
     t.integer "age", null: false
     t.string "img_url", null: false
     t.string "location", null: false
-    t.integer "user_id"
+    t.integer "user_id", null: false
     t.string "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import PetIndexContainer from '../pets/pet_index_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -18,8 +19,13 @@ class Greeting extends React.Component {
     if (this.props.currentUser) {
       return(
         <div>
-          <h2>Welcome, {this.props.currentUser.username}!</h2>
-          <button onClick={this.handleLogOut}>Log Out</button>
+          <nav>
+            <h2>Welcome, {this.props.currentUser.username}!</h2>
+            <button onClick={this.handleLogOut}>Log Out</button>
+          </nav>
+          <div>
+            <PetIndexContainer />
+          </div>
         </div>
       );
     }

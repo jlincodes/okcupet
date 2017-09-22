@@ -22,4 +22,7 @@ User.create({ username: 'viserion', password: 'password',
   email: "viserion123@email.com", organization: false,
   img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/d/d5/Viserion_2x10.jpg/revision/latest/scale-to-width-down/170?cb=20160720030947",
   location: "San Francisco", summary: "cute but dangerous" })
-  
+
+Pet.create({name: "breakfast", animal_type: "cat", age: 1, img_url: "http://placekitten.com/200/200", location: "San Francisco", user_id: 1})
+Pet.create({name: "markov", animal_type: "cat", age: 1, img_url: "http://placekitten.com/200/200", location: "San Francisco", user_id: 1})
+Pet.create({name: "jeff", animal_type: "cat", age: 1, img_url: "http://placekitten.com/200/200", location: "San Francisco", user_id: 1})

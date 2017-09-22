@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
-  validates :name, :type, :age, :img_url, :location, presence: true
+  validates :name, :animal_type, :age, :img_url, :location, presence: true
 
   belongs_to :organization,
   primary_key: :id,
