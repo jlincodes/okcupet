@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
 import { login, logout, signup, clearErrors } from '../../actions/session_actions';
-import NavBar from './nav_bar';
+import SplashPage from './splash_page';
 
 const mapStateToProps = (state) => ({
   loggedIn: Boolean(state.session.currentUser),
@@ -19,4 +19,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(NavBar));
+)(SplashPage));

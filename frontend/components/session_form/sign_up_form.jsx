@@ -7,15 +7,10 @@ class SignUpForm extends React.Component {
     this.state = {
       username: "",
       password: "",
-      // errors: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
-
-  // componentDidMount() {
-  //   this.setState({ errors: this.props.errors });
-  // }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
@@ -28,7 +23,6 @@ class SignUpForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.signup(user);
-      // .fail( resp => this.setState( {errors: resp.responseJSON} ));
   }
 
   update(field) {
@@ -46,7 +40,6 @@ class SignUpForm extends React.Component {
   }
 
   render () {
-    // console.log("render signup form");
     return (
       <div className="homepage">
 

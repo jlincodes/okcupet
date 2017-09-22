@@ -8,20 +8,19 @@ import {
 } from 'react-router-dom';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import NavBarContainer from './nav/nav_bar_container';
-import GreetingContainer from './greeting/greeting_container';
+import SplashPage from './splash_page/splash_page_container';
+import PetIndexContainer from './pets/pet_index_container';
 
 const App = () => (
   <div>
     <header>
-      <div className="nav">
-      </div>
     </header>
 
     <Switch>
-      <AuthRoute exact path="/" component={NavBarContainer} />
-      <AuthRoute exact path="/signup" component={NavBarContainer} />
-      <ProtectedRoute path='/index' component={GreetingContainer} />
+      <AuthRoute exact path="/" component={SplashPage} />
+      <AuthRoute exact path="/signup" component={SplashPage} />
+      <ProtectedRoute path='/index' component={PetIndexContainer} />
+      <ProtectedRoute path='/pets' component={PetIndexContainer} />
       <Route path='/' component={() => <Redirect to='/index' />} />
     </Switch>
 
