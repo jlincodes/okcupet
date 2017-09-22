@@ -2,7 +2,7 @@ import React from 'react';
 import PetIndexContainer from './pet_index_container';
 
 import PetIndexItem from './pet_index_item';
-import GreetingContainer from '../greeting/greeting_container';
+import NavContainer from '../nav/nav_container';
 
 
 class PetIndex extends React.Component {

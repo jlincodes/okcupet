@@ -2,7 +2,6 @@ import React from 'react';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 
-// import GreetingContainer from '../greeting/greeting_container';
 import SignUpFormContainer from '../session_form/sign_up_form_container';
 import LoginFormContainer from '../session_form/login_form_container';
 
