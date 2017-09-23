@@ -1,6 +1,6 @@
-/*USER LOGIN*/
 
-.login-button {
+// session-button class buttons exist on splash page and nav components
+.session-button {
   cursor: pointer;
   height: 40px;
   font-size: 16px;
@@ -8,18 +8,7 @@
   border: 1px solid #ffffff;
   border-radius: 3px;
   color: #ffffff;
-  background-color: #4fc5d0;
-}
-
-.demo-button {
-  cursor: pointer;
-  height: 40px;
-  font-size: 16px;
-  padding: 0 15px;
-  border: 1px solid #ffffff;
-  border-radius: 3px;
-  color: #ffffff;
-  background-color: #4fc5d0;
+  background-color: transparent;
 }
 
 .login-form-wrapper {

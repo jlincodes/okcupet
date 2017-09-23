@@ -31,24 +31,14 @@ class SplashPage extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
     this.clearErrors = this.props.clearErrors.bind(this);
-    // console.log(this.props);
   }
 
-  // componentWillUnmount() {
-  //   this.clearErrors();
-  //   console.log("unmount");
-  // }
-  // modal
-
   openModal() {
-    // console.log("open", this.props);
-    // clearErrors does not work :(
     this.setState({modalIsOpen: true});
     this.clearErrors();
   }
 
   closeModal() {
-    // console.log(this.clearErrors);
     this.clearErrors();
     this.setState({modalIsOpen: false});
   }
@@ -63,13 +53,13 @@ class SplashPage extends React.Component {
     return (
       <div>
         <div>
-          <div className="nav-bar">
-            <p className="logo">OKCuPet!</p>
+          <div className="splash-nav-bar">
+            <p className="logo">okcupet!</p>
             <p className="auth">
               Already a member?&nbsp;
-              <button className="login-button" onClick={ this.openModal }>
+              <button className="session-button" onClick={ this.openModal }>
                 Log In</button>&nbsp;
-              <button className="demo-button" onClick={ this.handleGuest }>
+              <button className="session-button" onClick={ this.handleGuest }>
                 Demo</button>
             </p>
 
