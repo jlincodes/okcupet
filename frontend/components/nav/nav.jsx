@@ -25,11 +25,11 @@ class Nav extends React.Component {
               <button className="session-button" onClick={this.handleLogOut}>Log Out</button>
             </p>
           </div>
-          <h2>Welcome, {this.props.currentUser.username}!</h2>
         </div>
       );
     }
   }
 }
+// <h2>Welcome, {this.props.currentUser.username}!</h2>
 
 export default withRouter(Nav);

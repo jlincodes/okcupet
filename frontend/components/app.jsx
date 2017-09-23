@@ -10,6 +10,7 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashPage from './splash_page/splash_page_container';
 import PetIndexContainer from './pets/pet_index_container';
+import PetShowContainer from './pets/pet_show_container';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
       <AuthRoute exact path="/" component={SplashPage} />
       <AuthRoute exact path="/signup" component={SplashPage} />
       <ProtectedRoute path='/index' component={PetIndexContainer} />
+      <ProtectedRoute path='/pets/:petId' component={PetShowContainer} />
       <ProtectedRoute path='/pets' component={PetIndexContainer} />
       <Route path='/' component={() => <Redirect to='/index' />} />
     </Switch>
