@@ -14,17 +14,14 @@
  *= require_self
  */
 
-#root {
-}
-
-body {
+/*body {
   font-family: 'Montserrat', sans-serif;
   margin: auto;
-}
+}*/
 
 /*"SPLASHPAGE"/HOMEPAGE*/
 
-.nav {
+/*.nav {
   width: 100%;
   background-color: #4fc5d0;
 }
@@ -36,10 +33,10 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 30px 100px 0px 100px;
-}
+}*/
 
 /*USER LOGIN*/
-
+/*
 .login-button {
   cursor: pointer;
   height: 40px;
@@ -98,10 +95,10 @@ body {
   border-radius: 3px;
   color: #ffffff;
   background-color: #3260c7;
-}
+}*/
 
 /*SPLASHPAGE MAIN TEXT*/
-
+/*
 .homepage {
   background-color: #4fc5d0;
   color: white;
@@ -132,10 +129,10 @@ body {
   width: 490px;
   font-family: 'GT America',sans-serif;
   font-weight: normal;
-}
+}*/
 
 /*SIGN-UP FORM*/
-
+/*
 .signup-form {
   color: black;
   display: flex;
@@ -183,18 +180,18 @@ body {
 .auth-errors ul {
   list-style: none;
   padding: 0px;
-}
+}*/
 
 /* MATCHES PAGE (PET INDEX)*/
 
-.filter-sort-wrapper {
+/*.filter-sort-wrapper {
   display: flex;
   justify-content: center;
-}
+}*/
 
 /*ALL MATCHES*/
 
-.pet-index {
+/*.pet-index {
   text-align: center;
   min-width: 900px;
   display: flex;
@@ -219,10 +216,10 @@ body {
   width: 100%;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-}
+}*/
 
 /*INDIVIDUAL MATCHES ON MATCH INDEX*/
-
+/*
 .match-wrapper {
   border-radius: 5px;
   border: 1px solid #f4f4f4;
@@ -238,4 +235,4 @@ body {
 
 .match-wrapper h3 {
   margin: 5px;
-}
+}*/

@@ -1,0 +1,111 @@
+/*USER LOGIN*/
+
+.login-button {
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #4fc5d0;
+}
+
+.demo-button {
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #4fc5d0;
+}
+
+.login-form-wrapper {
+  text-align: center;
+  line-height: 15px;
+  width: 214px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px 48px 40px;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+}
+
+.login-form {
+  color: black;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 50px 0px 50px;
+}
+
+.login-form input {
+  height: 25px;
+  border-radius: 3px;
+}
+
+.login-form-button {
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 1px solid #3260c7;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #3260c7;
+}
+
+
+.signup-form {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 50px 0px 50px;
+}
+
+.signup-form input {
+  height: 25px;
+  border-radius: 3px;
+}
+
+.signup-form-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.signup-form-wrapper {
+  width: 214px;
+  padding: 32px;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  border: 1px solid #3260c7;
+}
+
+.sign-up-button {
+  cursor: pointer;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 1px solid #3260c7;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #3260c7;
+}
+
+.auth-errors {
+  font-size: 14px;
+  line-height: 15px;
+  color: red;
+}
+
+.auth-errors ul {
+  list-style: none;
+  padding: 0px;
+}

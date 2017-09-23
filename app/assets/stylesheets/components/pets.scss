@@ -1,0 +1,48 @@
+.filter-sort-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.pet-index {
+  text-align: center;
+  min-width: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+.pets-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding-left: 0px;
+
+}
+
+.pets-list li {
+  margin: 40px;
+}
+
+.pet-img {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.match-wrapper {
+  border-radius: 5px;
+  border: 1px solid #f4f4f4;
+  width: 220px;
+  height: 325px
+}
+
+.match-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.match-wrapper h3 {
+  margin: 5px;
+}
