@@ -6,75 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'faker'
 
 User.destroy_all
 
-User.create({ username: 'guest', password: 'password',
-  email: "fakeemail0@email.com", organization: false,
-  img_url: "", location: "San Francisco", summary: "" })
-
-User.create({ username: Faker::Name.name, password: 'password',
-  email: "fakeemail1@email.com", organization: false,
-  img_url: "", location: "San Francisco", summary: "" })
-
-User.create({ username: Faker::Name.name, password: 'password',
-  email: "fakeemail2@email.com", organization: false,
-  img_url: "", location: "San Francisco", summary: "" })
-
-User.create({ username: Faker::Name.name, password: 'password',
-  email: "fakeemail3@email.com", organization: false,
-  img_url: "", location: "San Francisco", summary: "" })
-
-User.create({ username: Faker::Name.name, password: 'password',
-  email: "fakeemail4@email.com", organization: false,
-  img_url: "", location: "San Francisco", summary: "" })
-
-User.create({ username: Faker::Name.name, password: 'password',
-  email: "fakeemail5@email.com", organization: false,
-  img_url: "", location: "San Francisco", summary: "" })
-
-User.create({ username: Faker::Name.name, password: 'password',
-  email: "fakeemail6@email.com", organization: false,
-  img_url: "", location: "San Francisco", summary: "" })
+User.create!(username: 'guest', password: 'password', email: "fakeemail0@email.com", organization: false, img_url: "", location: "San Francisco", summary: "Demo login")
+User.create!(username: 'Daenerys Stormborn', password: 'password', email: 'dany@email.com', organization: true, img_url: "", location: "San Francisco", summary: "I am Daenerys Stormborn of House Targaryen, of the blood of Old Valyria! I am the dragon's daughter, and I swear to you that those who would harm you will die screaming!")
+User.create!(username: 'Julie', password: 'password', email: 'julie@email.com', organization: true, img_url: "https://68.media.tumblr.com/b5b053b07750a797db50db98bf8956ac/tumblr_ogsku0OWnc1vl94c7o7_1280.jpg", location: "San Francisco", summary: "I like all the animals.")
 
 Pet.destroy_all
 
-user_ids = User.all.map { |user| user.id }
+# user_ids = User.all.map { |user| user.id }
 
-Pet.create(name: Faker::GameOfThrones.character, animal_type: "cat", age: rand(9),
-  img_url: "http://skypaws.net/wp-content/uploads/2016/02/kitten.jpg",
-  location: "San Francisco", user_id: user_ids[0])
-Pet.create(name: Faker::GameOfThrones.character, animal_type: "cat", age: rand(9),
-  img_url: "http://skypaws.net/wp-content/uploads/2016/02/kitten.jpg",
-  location: "San Francisco", user_id: user_ids[2])
-Pet.create(name: Faker::GameOfThrones.dragon, animal_type: "cat", age: rand(9),
-  img_url: "http://skypaws.net/wp-content/uploads/2016/02/kitten.jpg",
-  location: "San Francisco", user_id: user_ids[1])
-Pet.create(name: Faker::RickAndMorty.character, animal_type: "cat", age: rand(9),
-  img_url: "http://skypaws.net/wp-content/uploads/2016/02/kitten.jpg",
-  location: "San Francisco", user_id: user_ids[2])
-Pet.create(name: Faker::RickAndMorty.character, animal_type: "cat", age: rand(9),
-  img_url: "http://skypaws.net/wp-content/uploads/2016/02/kitten.jpg",
-  location: "San Francisco", user_id: user_ids[3])
-Pet.create(name: Faker::RickAndMorty.character, animal_type: "cat", age: rand(9),
-  img_url: "http://skypaws.net/wp-content/uploads/2016/02/kitten.jpg",
-  location: "San Francisco", user_id: user_ids[4])
-Pet.create(name: Faker::GameOfThrones.character, animal_type: "dog", age: rand(9),
-  img_url: "https://i.pinimg.com/736x/1e/8a/cd/1e8acd7145614a0de71560220a72e6f3--shiba-puppy-shiba-inu-puppies.jpg",
-  location: "San Francisco", user_id: user_ids[0])
-Pet.create(name: Faker::GameOfThrones.character, animal_type: "dog", age: rand(9),
-  img_url: "https://i.pinimg.com/736x/1e/8a/cd/1e8acd7145614a0de71560220a72e6f3--shiba-puppy-shiba-inu-puppies.jpg",
-  location: "San Francisco", user_id: user_ids[2])
-Pet.create(name: Faker::GameOfThrones.character, animal_type: "dog", age: rand(9),
-  img_url: "https://i.pinimg.com/736x/1e/8a/cd/1e8acd7145614a0de71560220a72e6f3--shiba-puppy-shiba-inu-puppies.jpg",
-  location: "San Francisco", user_id: user_ids[1])
-Pet.create(name: Faker::RickAndMorty.character, animal_type: "dog", age: rand(9),
-  img_url: "https://i.pinimg.com/736x/1e/8a/cd/1e8acd7145614a0de71560220a72e6f3--shiba-puppy-shiba-inu-puppies.jpg",
-  location: "San Francisco", user_id: user_ids[2])
-Pet.create(name: Faker::RickAndMorty.character, animal_type: "dog", age: rand(9),
-  img_url: "https://i.pinimg.com/736x/1e/8a/cd/1e8acd7145614a0de71560220a72e6f3--shiba-puppy-shiba-inu-puppies.jpg",
-  location: "San Francisco", user_id: user_ids[3])
-Pet.create(name: Faker::RickAndMorty.character, animal_type: "dog", age: rand(9),
-  img_url: "https://i.pinimg.com/736x/1e/8a/cd/1e8acd7145614a0de71560220a72e6f3--shiba-puppy-shiba-inu-puppies.jpg",
-  location: "San Francisco", user_id: user_ids[4])
+Pet.create!(name: "Drogon", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/0/00/Drogon_2x10.jpg/revision/latest?cb=20160726064359", location: "Westeros", user_id: 2)
+Pet.create!(name: "Rhaegal", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/c/c4/Rhaegal_1x10.jpg/revision/latest?cb=20160720030915", location: "Westeros", user_id: 2)
+Pet.create!(name: "Viserion", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/d/d5/Viserion_2x10.jpg/revision/latest?cb=20160720030947", location: "Westeros", user_id: 2)
+Pet.create!(name: "Rick", animal_type: "cat", age: 5, img_url: "http://www.catster.com/wp-content/uploads/2014/08/An-albino-cat.jpg", location: "San Francisco", user_id: 3)
+Pet.create!(name: "Morty", animal_type: "cat", age: 1, img_url: "https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/a/a3/324536-cats-brown-kitten.jpg/revision/latest?cb=20161127015136", location: "San Francisco", user_id: 3)
+Pet.create!(name: "Summer", animal_type: "cat", age: 2, img_url: "https://vignette2.wikia.nocookie.net/animal-jam-clans-1/images/2/22/Cute-Light-Brown-Cat-1920x1200.jpg/revision/latest?cb=20161204235438", location: "San Francisco", user_id: 3)
+Pet.create!(name: "Ghost", animal_type: "dire wolf", age: 7, img_url: "https://i.pinimg.com/originals/0c/92/0d/0c920d58b210a74a75868df885160a5f.jpg", location: "Westeros", user_id: 3)
+Pet.create!(name: "Nymeria", animal_type: "dog", age: 7, img_url: "https://pixel.nymag.com/imgs/vulture/slideshows/2015/06/game-of-thrones-missing-characters/nymeria.w710.h473.jpg", location: "Westeros", user_id: 3)
+Pet.create!(name: "Sterling Archer", animal_type: "dog", age: 4, img_url: "https://vetstreet.brightspotcdn.com/dims4/default/3e7dd32/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F8d%2Ffa82f0a80611e0a0d50050568d634f%2Ffile%2FSiberian-Husky-2-645mk062811.jpg", location: "San Francisco", user_id: 3)
+Pet.create!(name: "Lana Kane", animal_type: "dog", age: 4, img_url: "https://i.ytimg.com/vi/oGoPUw0YBAg/maxresdefault.jpg", location: "San Francisco", user_id: 3)
