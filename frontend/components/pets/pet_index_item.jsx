@@ -10,7 +10,7 @@ const PostIndexItem = (props) => {
           <Link to={`/pets/${pet.id}`}>
             <img
             className="pet-img"
-            src="http://skypaws.net/wp-content/uploads/2016/02/kitten.jpg"
+            src={pet.img_url}
             alt={pet.name} />
           </Link>
         </div>

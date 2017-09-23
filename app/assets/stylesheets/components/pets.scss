@@ -15,7 +15,6 @@
   display: grid;
   grid-template-columns: 33% 33% 33%;
   padding-left: 0px;
-
 }
 
 .pets-list li {
@@ -24,8 +23,8 @@
 
 .pet-img {
   position: relative;
-  height: 220px;
   width: 100%;
+  height: 220px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
@@ -33,8 +32,8 @@
 .match-wrapper {
   border-radius: 5px;
   border: 1px solid #f4f4f4;
-  width: 220px;
-  height: 325px
+  width: 280px;
+  height: 385px
 }
 
 .match-info {
