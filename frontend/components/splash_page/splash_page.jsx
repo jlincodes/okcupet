@@ -46,6 +46,7 @@ class SplashPage extends React.Component {
   // demo guest login
   handleGuest(e) {
     e.preventDefault();
+    this.clearErrors();
     this.props.login({ username: 'guest', password: 'password' });
   }
 
