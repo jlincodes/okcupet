@@ -24,7 +24,9 @@ class Nav extends React.Component {
         <div>
           <div className="nav-bar">
             <div className="nav-right">
-              <p className="logo">okcupet!</p>
+              <Link to="/" className="home-link">
+                <p className="logo">okcupet!</p>
+              </Link>
             </div>
             <div className="nav-left">
               <p className="header-user-img">

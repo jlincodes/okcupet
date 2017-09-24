@@ -55,7 +55,9 @@ class SplashPage extends React.Component {
       <div>
         <div>
           <div className="splash-nav-bar">
-            <p className="logo">okcupet!</p>
+            <Link to="/" className="home-link">
+              <p className="logo">okcupet!</p>
+            </Link>
             <p className="auth">
               Already a member?&nbsp;
               <button className="session-button" onClick={ this.openModal }>
