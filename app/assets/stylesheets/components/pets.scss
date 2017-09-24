@@ -5,7 +5,7 @@
 
 .pet-index {
   text-align: center;
-  min-width: 900px;
+  min-width: 1000px;
   display: flex;
   justify-content: center;
 }
@@ -36,12 +36,12 @@
   height: 385px
 }
 
+.match-wrapper h3 {
+  margin: 5px;
+}
+
 .match-info {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
-}
-
-.match-wrapper h3 {
-  margin: 5px;
 }

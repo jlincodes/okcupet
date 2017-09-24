@@ -18,12 +18,33 @@ class PetShow extends React.Component {
       return (
         <div>
           <NavContainer />
-          <div>
-            <div className="profile-img-icon-wrapper">
-              <img src={pet.img_url} />
-            </div>
-            <h1>{pet.name}</h1>
 
+          <div></div>
+
+          <div className="profile">
+            <div className="profile-header">
+              <div className="profile-header-items">
+                <div className="profile-img">
+                  <img src={pet.img_url} />
+                </div>
+                <div>
+                  <h3>{pet.name}</h3>
+                  <p>Age: {pet.age} &middot; {pet.location}</p>
+                </div>
+              </div>
+            </div>
+            <div className="profile-body-wrapper">
+              <div className="profile-body">
+                <div className="about-me">
+                  <h2>Summary:</h2>
+                  <p>{pet.summary}</p>
+                </div>
+                <div className="details">
+                  <h2>Species:</h2>
+                  <p>{pet.animal_type}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       );
