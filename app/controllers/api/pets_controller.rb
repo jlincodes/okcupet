@@ -1,6 +1,10 @@
 class Api::PetsController < ApplicationController
   def index
-    @pets = Pet.all
+    if params[:animal_type]
+      @pets = Pet.find_by_animal_type(params[:animal_type])
+    else
+      @pets = Pet.all
+    end
   end
 
   def show

@@ -1,6 +1,7 @@
 import { RECEIVE_ALL_PETS,
          RECEIVE_PET,
-         REMOVE_PET } from '../actions/pet_actions';
+         REMOVE_PET,
+         SEARCH_PETS } from '../actions/pet_actions';
 import merge from 'lodash/merge';
 
 const defaultState = {};
@@ -16,6 +17,8 @@ const PetReducer = (oldState = defaultState, action) => {
       let newState = merge({}, oldState);
       delete newState[action.pet.id];
       return newState;
+    case SEARCH_PETS:
+      return action.pets;
     default:
       return oldState;
   }

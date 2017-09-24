@@ -3,6 +3,7 @@ import * as PetApiUtil from '../util/pet_api_util';
 export const RECEIVE_ALL_PETS = "RECEIVE_ALL_PETS";
 export const RECEIVE_PET = "RECEIVE_PET";
 export const REMOVE_PET = "REMOVE_PET";
+export const SEARCH_PETS = "SEARCH_PETS";
 
 const receiveAllPets = (pets) => ({
   type: RECEIVE_ALL_PETS,
@@ -19,9 +20,19 @@ const removePet = (pet) => ({
   pet
 });
 
+const receivePets = (query) => ({
+  type: SEARCH_PETS,
+  query
+});
+
 export const fetchAllPets = () => dispatch => (
   PetApiUtil.fetchAllPets()
     .then(resp => dispatch(receiveAllPets(resp)))
+);
+
+export const searchPets = (query) => dispatch => (
+  PetApiUtil.searchPets(query)
+    .then(resp => dispatch(receivePets(resp)))
 );
 
 export const fetchPet = (id) => dispatch => (

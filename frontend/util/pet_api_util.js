@@ -5,6 +5,14 @@ export const fetchAllPets = () => (
   })
 );
 
+export const searchPets = (query) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/pets`,
+    data: { query }
+  })
+);
+
 export const fetchPet = (id) => (
   $.ajax({
     method: 'GET',
