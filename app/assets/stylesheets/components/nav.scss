@@ -7,3 +7,23 @@
   padding: 30px 100px 0px 100px;
   min-width: 800px;
 }
+
+.nav-left {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-user-img {
+  background-color: #104da1;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  img {
+    width: 100%;
+    position: relative;
+  }
+}
