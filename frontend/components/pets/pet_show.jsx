@@ -10,7 +10,6 @@ class PetShow extends React.Component {
   }
 
   render() {
-    // console.log("this.props.pet", this.props.pet);
     const pet = this.props.pet;
 
     if (pet) {

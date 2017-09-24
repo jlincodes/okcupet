@@ -10,10 +10,7 @@ class UserShow extends React.Component {
   }
 
   render() {
-    // console.log("user:", this.props.user);
     const user = this.props.user;
-    console.log(user);
-    // console.log(user.summary);
 
     if (user) {
       return (
@@ -37,7 +34,7 @@ class UserShow extends React.Component {
               <div className="profile-body">
                 <div className="about-me">
                   <h2>Summary:</h2>
-                  <p>Summary here...</p>
+                  <p>{user.summary}</p>
                 </div>
                 <div className="details">
                   <h2>Additional details:</h2>
