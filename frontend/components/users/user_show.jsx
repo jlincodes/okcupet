@@ -10,14 +10,23 @@ class UserShow extends React.Component {
   }
 
   render() {
-    console.log("this.props.user", this.props.user);
-    // const user = this.props.user;
-    return (
-      <div>
-        <div><NavContainer /></div>
-        <h1>A User here</h1>
-      </div>
-    );
+    console.log(this.props.user);
+    const user = this.props.user;
+
+    if (user) {
+      return (
+        <div>
+          <div><NavContainer /></div>
+          <h1>A User here</h1>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h1>Loading...</h1>
+        </div>
+      );
+    }
   }
 }
 

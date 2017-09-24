@@ -44,6 +44,5 @@ class Nav extends React.Component {
     }
   }
 }
-// <h2>Welcome, {this.props.currentUser.username}!</h2>
 
 export default withRouter(Nav);
