@@ -10,7 +10,7 @@ class PetShow extends React.Component {
   }
 
   render() {
-    console.log("this.props.pet", this.props.pet);
+    // console.log("this.props.pet", this.props.pet);
     const pet = this.props.pet;
 
     if (pet) {
@@ -18,8 +18,6 @@ class PetShow extends React.Component {
       return (
         <div>
           <NavContainer />
-
-          <div></div>
 
           <div className="profile">
             <div className="profile-header">

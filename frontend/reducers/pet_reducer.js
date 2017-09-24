@@ -9,7 +9,6 @@ const PetReducer = (oldState = defaultState, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_ALL_PETS:
-      // const pets = action.pets;
       return action.pets;
     case RECEIVE_PET:
       return merge({}, oldState, {[action.pet.id]: action.pet});

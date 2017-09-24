@@ -16,14 +16,28 @@ class Nav extends React.Component {
   }
 
   render() {
-    if (this.props.currentUser) {
+    const currentUser = this.props.currentUser;
+    // console.log("nav this.props", this.props);
+    if (currentUser) {
       return(
+
         <div>
           <div className="nav-bar">
-            <p className="logo">okcupet!</p>
-            <p>
-              <button className="session-button" onClick={this.handleLogOut}>Log Out</button>
-            </p>
+            <div className="nav-right">
+              <p className="logo">okcupet!</p>
+            </div>
+            <div className="nav-left">
+              <p className="header-user-img">
+                <Link to={`/users/${currentUser.id}`}>
+                  <img
+                    src={currentUser.img_url}
+                    alt={currentUser.username} />
+                </Link>
+              </p>
+              <p>
+                <button className="session-button" onClick={this.handleLogOut}>Log Out</button>
+              </p>
+            </div>
           </div>
         </div>
       );
