@@ -12,8 +12,15 @@ export const fetchConversation = (id) => (
 );
 export const createConversation = (conversation) => (
   $.ajax({
-    method: 'GET',
+    method: 'POST',
     url: `/api/conversations/${conversation.id}`,
     data: { conversation }
+  })
+);
+
+export const createMessage = (message) => (
+  $.ajax({
+    method: 'POST',
+    url: `/api/conversations/${message.conversation_id}/messages`
   })
 );
