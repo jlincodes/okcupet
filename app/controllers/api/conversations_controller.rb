@@ -5,7 +5,7 @@ class Api::ConversationsController < ApplicationController
         .includes(:messages)
         .includes(:convo_starter)
         .includes(:convo_receiver)
-        .where("convo_starter = ? OR convo_receiver = ?", current_user.id, current_user.id)
+        .where("sender_id = ? OR recipient_id = ?", current_user.id, current_user.id)
         .order(created_at: :desc)
   end
 
