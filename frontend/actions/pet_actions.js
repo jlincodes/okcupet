@@ -20,10 +20,10 @@ const removePet = (pet) => ({
   pet
 });
 
-const receivePets = (query) => ({
-  type: SEARCH_PETS,
-  query
-});
+// const receivePets = (query) => ({
+//   type: SEARCH_PETS,
+//   query
+// });
 
 export const fetchAllPets = () => dispatch => (
   PetApiUtil.fetchAllPets()
@@ -32,7 +32,7 @@ export const fetchAllPets = () => dispatch => (
 
 export const searchPets = (query) => dispatch => (
   PetApiUtil.searchPets(query)
-    .then(resp => dispatch(receivePets(resp)))
+    .then(resp => dispatch(receiveAllPets(resp)))
 );
 
 export const fetchPet = (id) => dispatch => (

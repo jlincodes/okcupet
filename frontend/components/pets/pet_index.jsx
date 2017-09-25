@@ -19,9 +19,9 @@ class PetIndex extends React.Component {
   handleSearch(e) {
     e.preventDefault();
     if (this.props) {
-      // console.log("e.currentTarget.value", e.currentTarget.value);
+      console.log("e.currentTarget.value", e.currentTarget.value);
       this.props.searchPets(e.currentTarget.value);
-      console.log(this.props.searchPets(e.currentTarget.value));
+      // console.log(this.props.searchPets(e.currentTarget.value));
     }
   }
 

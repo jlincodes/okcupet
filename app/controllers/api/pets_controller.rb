@@ -1,7 +1,7 @@
 class Api::PetsController < ApplicationController
   def index
-    if params[:animal_type]
-      @pets = Pet.find_by_animal_type(params[:animal_type])
+    if params[:query]
+      @pets = Pet.find_by_animal_type(params[:query])
     else
       @pets = Pet.all
     end
@@ -45,5 +45,9 @@ class Api::PetsController < ApplicationController
 
   def pet_params
     params.require(:pet).permit(:name, :animal, :age, :img_url, :location, :user_id)
+  end
+
+  def search_params
+    params.require(:search).permit(:query)
   end
 end
