@@ -8,6 +8,21 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Pet
 
+  has_many :sent_conversations,
+  primary_key: :id,
+  foreign_key: :sender_id,
+  class_name: :Conversation
+
+  has_many :received_conversations,
+  primary_key: :id,
+  foreign_key: :recipient_id,
+  class_name: :Conversation
+
+  has_many :authored_messages,
+  primary_key: :id,
+  foreign_key: :author_id,
+  class_name: :Message
+
   attr_reader :password
 
   after_initialize :ensure_session_token

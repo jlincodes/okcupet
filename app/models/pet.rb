@@ -13,8 +13,8 @@ class Pet < ApplicationRecord
   def self.find_by_location(location)
     Pet.where('location LIKE ?', location)
   end
-  #
-  # def self.find_by_search(animal_type, location)
-  #   Pet.where('animal_type LIKE ?', animal_type).where('location LIKE ?', location)
-  # end
+
+  def self.find_by_search(animal_type, location)
+    Pet.where('animal_type LIKE ?', animal_type).where('location LIKE ?', location)
+  end
 end

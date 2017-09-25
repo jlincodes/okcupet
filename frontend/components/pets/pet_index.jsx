@@ -9,14 +9,22 @@ class PetIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {pets: this.props.pets};
-    this.handleSearch = this.handleSearch.bind(this);
+    this.handleSearchBySpecies = this.handleSearchBySpecies.bind(this);
+    this.handleSearchByLoc = this.handleSearchByLoc.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchAllPets();
   }
 
-  handleSearch(e) {
+  handleSearchBySpecies(e) {
+    e.preventDefault();
+    if (this.props) {
+      this.props.searchPets(e.currentTarget.value);
+    }
+  }
+
+  handleSearchByLoc(e) {
     e.preventDefault();
     if (this.props) {
       this.props.searchPets(e.currentTarget.value);
@@ -37,16 +45,16 @@ class PetIndex extends React.Component {
           <h2>Here are some OK pets...</h2>
           <div className="filter-wrapper">
             Filter by species:
-            <select className="pet-species-dropdown" onChange={this.handleSearch}>
+            <select className="pet-species-dropdown" onChange={this.handleSearchBySpecies}>
               <option value ="any" defaultValue>--Any--</option>
               <option value="cat">cat</option>
               <option value="dire wolf">dire wolf</option>
               <option value="dog">dog</option>
               <option value="dragon">dragon</option>
             </select>
-            
+
             Filter by location:
-            <select className="pet-loc-dropdown" onChange={this.handleSearch}>
+            <select className="pet-loc-dropdown" onChange={this.handleSearchByLoc}>
               <option value ="any" defaultValue>--Any--</option>
               <option value="San Francisco">San Francisco</option>
               <option value="Westeros">Westeros</option>
