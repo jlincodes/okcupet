@@ -5,20 +5,25 @@
 
 .pet-index {
   text-align: center;
-  min-width: 1000px;
+  width: 1000px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .pets-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
+  // display: grid;
+  // grid-template-columns: 33% 33% 33%;
+  width: 100%;
   padding-left: 0px;
 }
 
 .pets-list li {
-  margin: 40px;
+  // margin: 40px;
+  width: 27%;
+  margin: 3%;
+  float: left;
 }
 
 .pet-img {
