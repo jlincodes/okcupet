@@ -12,6 +12,7 @@ import SplashPage from './splash_page/splash_page_container';
 import PetIndexContainer from './pets/pet_index_container';
 import PetShowContainer from './pets/pet_show_container';
 import UserShowContainer from './users/user_show_container';
+import ConversationIndexContainer from './conversation/conversation_index_container';
 
 const App = () => (
   <div>
@@ -22,6 +23,7 @@ const App = () => (
       <AuthRoute exact path="/" component={SplashPage} />
       <AuthRoute exact path="/signup" component={SplashPage} />
       <ProtectedRoute path='/users/:userId' component={UserShowContainer} />
+      <ProtectedRoute patch="/messages" component={ConversationIndexContainer} />
       <ProtectedRoute path='/index' component={PetIndexContainer} />
       <ProtectedRoute path='/pets/:petId' component={PetShowContainer} />
       <ProtectedRoute path='/pets' component={PetIndexContainer} />
