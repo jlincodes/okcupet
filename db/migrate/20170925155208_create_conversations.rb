@@ -1,9 +1,8 @@
 class CreateConversations < ActiveRecord::Migration[5.1]
   def change
     create_table :conversations do |t|
-      t.integer :sender_id_id
-      t.integer :recipient_id
-      t.integer :pet_id
+      t.integer :user_one_id
+      t.integer :user_two_id
 
       t.timestamps
     end
