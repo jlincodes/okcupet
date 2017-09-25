@@ -19,14 +19,11 @@ class PetIndex extends React.Component {
   handleSearch(e) {
     e.preventDefault();
     if (this.props) {
-      // console.log("e.currentTarget.value", e.currentTarget.value);
       this.props.searchPets(e.currentTarget.value);
-      // console.log(this.props.searchPets(e.currentTarget.value));
     }
   }
 
   render () {
-    // console.log("this.props", this.props);
     if (!this.props) {
       return (
         <div></div>
@@ -46,6 +43,13 @@ class PetIndex extends React.Component {
               <option value="dire wolf">dire wolf</option>
               <option value="dog">dog</option>
               <option value="dragon">dragon</option>
+            </select>
+
+            Filter by location:
+            <select className="pet-loc-dropdown" onChange={this.handleSearch}>
+              <option value ="select" disabled>--Select--</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="Westeros">Westeros</option>
             </select>
           </div>
           <div className="pet-index">
