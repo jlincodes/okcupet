@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'faker'
 
 User.destroy_all
 
@@ -27,3 +28,13 @@ Pet.create!(name: "Ghost", animal_type: "dire wolf", age: 7, img_url: "https://i
 Pet.create!(name: "Nymeria", animal_type: "dire wolf", age: 7, img_url: "https://pixel.nymag.com/imgs/vulture/slideshows/2015/06/game-of-thrones-missing-characters/nymeria.w710.h473.jpg", location: "Westeros", user_id: 3, summary: "*growl*")
 Pet.create!(name: "Sterling Archer", animal_type: "dog", age: 4, img_url: "https://vetstreet.brightspotcdn.com/dims4/default/3e7dd32/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F8d%2Ffa82f0a80611e0a0d50050568d634f%2Ffile%2FSiberian-Husky-2-645mk062811.jpg", location: "San Francisco", user_id: 3, summary: "Phrasing! Something, something, DANGER ZONE! LANA!")
 Pet.create!(name: "Lana Kane", animal_type: "dog", age: 4, img_url: "https://i.ytimg.com/vi/oGoPUw0YBAg/maxresdefault.jpg", location: "San Francisco", user_id: 3, summary: "I don’t need a baby to validate my existence.")
+
+
+Conversation.destroy_all
+
+Conversation.create!(sender_id: 3, recipient_id: 1)
+
+Message.destroy_all
+
+Message.create!(author_id: 3, conversation_id: 1, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 1, conversation_id: 1, body: Faker::RickAndMorty.quote)
