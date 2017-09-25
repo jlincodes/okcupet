@@ -35,19 +35,19 @@ class PetIndex extends React.Component {
         <NavContainer />
         <div className="matches-index">
           <h2>Here are some OK pets...</h2>
-          <div className="filter-sort-wrapper">
+          <div className="filter-wrapper">
             Filter by species:
-            <select className="pet-search-dropdown" onChange={this.handleSearch}>
-              <option value ="select" disabled>--Select--</option>
+            <select className="pet-species-dropdown" onChange={this.handleSearch}>
+              <option value ="any" defaultValue>--Any--</option>
               <option value="cat">cat</option>
               <option value="dire wolf">dire wolf</option>
               <option value="dog">dog</option>
               <option value="dragon">dragon</option>
             </select>
-
+            
             Filter by location:
             <select className="pet-loc-dropdown" onChange={this.handleSearch}>
-              <option value ="select" disabled>--Select--</option>
+              <option value ="any" defaultValue>--Any--</option>
               <option value="San Francisco">San Francisco</option>
               <option value="Westeros">Westeros</option>
             </select>
@@ -70,6 +70,3 @@ class PetIndex extends React.Component {
 }
 
 export default PetIndex;
-
-
-// {this.searchPets()}
