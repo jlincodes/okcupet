@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router';
 
 import PetShowContainer from './pet_show_container';
 import NavContainer from '../nav/nav_container';
@@ -42,11 +42,10 @@ class PetShow extends React.Component {
       recipient_id: currentPetOwnerId,
       subject: `Adoption Inquiry for ${petName}`
     };
-    // console.log("convo", conversation);
 
     this.props.createConversation(conversation)
-    .then(convo => {
-      console.log(convo);
+    .then((resp) => {
+      this.props.router.push(`/messages/${resp.conversation.id}`);
     });
   }
 
@@ -97,4 +96,4 @@ class PetShow extends React.Component {
   }
 }
 
-export default PetShow;
+export default withRouter(PetShow);

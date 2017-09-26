@@ -62,7 +62,6 @@ class PetIndex extends React.Component {
         <div></div>
       );
     }
-    console.log(this.props.pets);
     return (
       <div>
         <NavContainer />

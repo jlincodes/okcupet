@@ -5,7 +5,6 @@ import { fetchPet } from '../../actions/pet_actions';
 import { createConversation } from '../../actions/conversation_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state);
   return ({
     pet: state.pets[ownProps.match.params.petId],
     currentUser: state.session.currentUser
