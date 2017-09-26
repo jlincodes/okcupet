@@ -6,7 +6,9 @@
   }
 }
 
+
 .convo-li {
+  width: 700px;
   display: flex;
   justify-content: space-around;
   div {
@@ -25,4 +27,27 @@
   display: flex;
   justify-content: center;
   margin: 10px;
+}
+
+.msg-list {
+  width: 700px;
+  list-style: none;
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.msg-li {
+  display: flex;
+  justify-content: space-around;
+  div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+}
+
+.msg-body-wrapper {
+  width: 400px;
 }
