@@ -26,7 +26,6 @@ class PetShow extends React.Component {
       return (
         <div>
           <button
-            className="msg-user-button"
             onClick={this.handleMessage}>Message</button>
         </div>
       );
@@ -35,7 +34,20 @@ class PetShow extends React.Component {
 
   handleMessage(e) {
     e.preventDefault();
-    
+    let currentUserId = this.props.currentUser.id;
+    let currentPetOwnerId = this.props.pet.user_id;
+    let petName = this.props.pet.name;
+    let conversation = {
+      sender_id: currentUserId,
+      recipient_id: currentPetOwnerId,
+      subject: `Adoption Inquiry for ${petName}`
+    };
+    // console.log("convo", conversation);
+
+    this.props.createConversation(conversation)
+    .then(convo => {
+      console.log(convo);
+    });
   }
 
   render() {
