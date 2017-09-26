@@ -5,8 +5,37 @@ import PetShowContainer from './pet_show_container';
 import NavContainer from '../nav/nav_container';
 
 class PetShow extends React.Component {
+  constructor(props) {
+    super(props);
+    this.showMsgButton = this.showMsgButton.bind(this);
+    this.handleMessage = this.handleMessage.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchPet(this.props.match.params.petId);
+  }
+
+  showMsgButton() {
+    let currentUserId = this.props.currentUser.id;
+    let currentPetOwnerId = this.props.pet.user_id;
+    if (currentUserId === currentPetOwnerId) {
+      return (
+        <div></div>
+      );
+    } else {
+      return (
+        <div>
+          <button
+            className="msg-user-button"
+            onClick={this.handleMessage}>Message</button>
+        </div>
+      );
+    }
+  }
+
+  handleMessage(e) {
+    e.preventDefault();
+    
   }
 
   render() {
@@ -27,6 +56,7 @@ class PetShow extends React.Component {
                   <h3>{pet.name}</h3>
                   <p>Age: {pet.age} &middot; {pet.location}</p>
                 </div>
+                <div>{this.showMsgButton()}</div>
               </div>
             </div>
             <div className="profile-body-wrapper">
