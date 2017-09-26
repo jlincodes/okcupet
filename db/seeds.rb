@@ -32,7 +32,7 @@ Pet.create!(name: "Lana Kane", animal_type: "dog", age: 4, img_url: "https://i.y
 
 Conversation.destroy_all
 
-Conversation.create!(sender_id: 3, recipient_id: 1)
+Conversation.create!(sender_id: 3, recipient_id: 1, subject: "Adoption inquiry for Drogon")
 
 Message.destroy_all
 
