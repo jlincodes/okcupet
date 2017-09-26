@@ -5,6 +5,7 @@ import { configureStore } from './store/store';
 import Root from './components/root';
 import { signup, login, logout } from './actions/session_actions';
 import { searchPets } from './actions/pet_actions';
+import { createConversation } from './util/conversation_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.logout = logout;
   window.signup = signup;
   window.searchPets = searchPets;
+  window.createConversation = createConversation;
   // Testing end
   const root = document.getElementById('root');
 

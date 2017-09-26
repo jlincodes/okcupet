@@ -10,10 +10,10 @@
 //     url: `/api/messages/${id}`
 //   })
 // );
-// export const createMessage = (message) => (
-//   $.ajax({
-//     method: 'POST',
-//     url: `/api/messages/${message.id}`,
-//     data: { message }
-//   })
-// );
+export const createMessage = (message) => (
+  $.ajax({
+    method: 'POST',
+    url: `/api/messages`,
+    data: { message }
+  })
+);

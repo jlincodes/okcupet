@@ -1,12 +1,17 @@
 import React from 'react';
-import ConversationShowContainer from './conversation_show_container';
+import { Link } from 'react-router';
 
+import ConversationShowContainer from './conversation_show_container';
 import ConversationShowItem from './conversation_show_item';
 import NavContainer from '../nav/nav_container';
 
 class ConversationShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      message: ""
+    };
+    this.handleMessageCreate = this.handleMessageCreate.bind(this);
   }
 
   componentDidMount() {
@@ -15,6 +20,10 @@ class ConversationShow extends React.Component {
         this.props.match.params.conversationId));
   }
 
+  handleMessageCreate(e) {
+    e.preventDefault();
+    this.setState({message: e.currentTarget.value});
+  }
 
   render() {
 
@@ -38,6 +47,13 @@ class ConversationShow extends React.Component {
                 users={users} />
             ))}
           </ul>
+          <br />
+          <form
+            className="msg-form"
+            onSubmit={this.handleMessageCreate}>
+            <textarea rows="6" column="20"/>
+            <button type="submit">Send</button>
+          </form>
         </div>
       );
     }

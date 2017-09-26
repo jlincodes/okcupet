@@ -25,10 +25,5 @@ export const fetchConversation = (id) => dispatch => (
 
 export const createConversation = (conversation) => dispatch => (
   ConversationApiUtil.createConversation(conversation)
-  .then(resp => dispatch(receiveConversation()))
-);
-
-export const createMessage = (message) => dispatch => (
-  ConversationApiUtil.createMessage(message)
   .then(resp => dispatch(receiveConversation(resp)))
 );
