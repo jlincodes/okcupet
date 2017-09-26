@@ -14,7 +14,7 @@ class Api::ConversationsController < ApplicationController
   end
 
   def create
-    @conversations = Conversation.new(conversation_params)
+    @conversation = Conversation.new(conversation_params)
     if @conversation.save!
       render :show
     else
@@ -32,6 +32,6 @@ class Api::ConversationsController < ApplicationController
   private
 
   def conversation_params
-    params.require(:conversation).permit(:sender_id, :recipient_id)
+    params.require(:conversation).permit(:sender_id, :recipient_id, :subject)
   end
 end
