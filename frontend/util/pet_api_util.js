@@ -5,16 +5,6 @@ export const fetchAllPets = () => (
   })
 );
 
-export const searchPets = (query) => {
-  return (
-    $.ajax({
-    method: 'GET',
-    url: `api/pets`,
-    data: { query }
-  })
-);
-};
-
 export const fetchPet = (id) => (
   $.ajax({
     method: 'GET',
@@ -42,5 +32,13 @@ export const deletePet = (id) => (
   $.ajax({
     method: 'DELETE',
     url: `api/pets/${id}`
+  })
+);
+
+export const searchPets = (query) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/pets`,
+    data: { query }
   })
 );

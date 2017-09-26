@@ -10,6 +10,7 @@ const receiveAllConversations = (conversations) => ({
 
 const receiveConversation = (conversation) => ({
   type: RECEIVE_CONVERSATION,
+  conversation
 });
 
 export const fetchAllConversations = () => dispatch => (
@@ -17,17 +18,17 @@ export const fetchAllConversations = () => dispatch => (
     .then(resp => dispatch(receiveAllConversations(resp)))
 );
 
-export const fetchConversation = () => dispatch => (
-  ConversationApiUtil.fetchConversation()
+export const fetchConversation = (id) => dispatch => (
+  ConversationApiUtil.fetchConversation(id)
   .then(resp => dispatch(receiveConversation(resp)))
 );
 
-export const createConversation = () => dispatch => (
-  ConversationApiUtil.createConversation()
+export const createConversation = (conversation) => dispatch => (
+  ConversationApiUtil.createConversation(conversation)
   .then(resp => dispatch(receiveConversation()))
 );
 
-export const createMessage = () => dispatch => (
-  ConversationApiUtil.createMessage()
+export const createMessage = (message) => dispatch => (
+  ConversationApiUtil.createMessage(message)
   .then(resp => dispatch(receiveConversation(resp)))
 );

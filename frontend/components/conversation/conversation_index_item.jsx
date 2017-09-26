@@ -3,38 +3,38 @@ import { Link, withRouter } from 'react-router-dom';
 import ConversationIndex from './conversation_index';
 
 const ConversationIndexItem = (props) => {
-  // console.log(props);
   const conversation = props.conversation;
   const users = props.users;
-  // console.log(conversation);
-  // console.log(users);
+  const sender = conversation.sender_id;
+
   return (
     <li className='convo-li'>
       {
-        users[conversation.sender_id] ?
+        users[sender] ?
           <div className="msg-user-img">
-            <Link to={`/users/${users[conversation.sender_id].id}`}>
-              <img src={users[conversation.sender_id].img_url}
-                alt={users[conversation.sender_id].username} />
+            <Link to={`/users/${users[sender].id}`}>
+              <img src={users[sender].img_url}
+                alt={users[sender].username} />
             </Link>
           </div> : <span></span>
       }
       {
-        users[conversation.sender_id] ?
+        users[sender] ?
         <div>
-          <Link to={`/users/${users[conversation.sender_id].id}`}>
-            {users[conversation.sender_id].username}
+          <Link to={`/users/${users[sender].id}`}>
+            {users[sender].username}
           </Link>
         </div> : <span></span>
       }
       <div>
-        <Link to={`/users/${users[conversation.sender_id].id}`}>
+        <Link to={`/messages/${conversation.id}`}>
           {conversation.subject}
         </Link>
-        {conversation.subject}
       </div>
     </li>
   );
 };
 
 export default ConversationIndexItem;
+
+// {conversation.subject}

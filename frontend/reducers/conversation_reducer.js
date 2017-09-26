@@ -3,10 +3,7 @@ import {
   RECEIVE_CONVERSATION } from '../actions/conversation_actions';
 import merge from 'lodash/merge';
 
-const defaultState = {
-  conversations: {},
-  conversation: {},
-};
+const defaultState = {};
 
 const ConversationReducer = (state = defaultState, action) => {
   Object.freeze(state);

@@ -13,45 +13,30 @@ class ConversationIndex extends React.Component {
     this.props.fetchAllUsers().then(this.props.fetchAllConversations());
   }
 
-  // console.log("convo", conversations);
-  // let sendersIds = conversations.map( conversation => (
-  //   conversation.sender_id
-  // ));
-  // console.log(sendersIds);
-
-  //
-  // {
-  //   conversations.map( (conversation, idx) => {
-  //     return (
-  //     <li>
-  //       {conversation.subject}
-  //       {users[conversation.sender_id] ?
-  //       <span>{users[conversation.sender_id].username}</span> :
-  //       <span></span>}
-  //     </li>
-  //     );
-  //   })
-  // }
 
   render() {
 
     const conversations = this.props.conversations;
     const users = this.props.users;
 
+    // Messages List Header?
+    // <li className='convo-li'>
+    //   <div>Sender Profile Image:</div>
+    //   <div>Sender:</div>
+    //   <div>Subject:</div>
+    // </li>
 
     if (conversations && users) {
-      console.log("users", users);
-      if (users[3]) {
-
-        console.log(users[3].username);
-      }
       return (
         <div>
           <NavContainer />
           <h1>Messages</h1>
             <ul className="convo-list">
               {conversations.map((conversation, idx) => (
-                <ConversationIndexItem key={idx} conversation={conversation} users={users} />
+                <ConversationIndexItem
+                  key={idx}
+                  conversation={conversation}
+                  users={users} />
               ))}
             </ul>
 
@@ -69,11 +54,3 @@ class ConversationIndex extends React.Component {
 }
 
 export default ConversationIndex;
-
-// {
-//   conversations.map((conversation, idx) => (
-//   <ConversationIndexItem
-//     key={idx}
-//     conversation={ conversation } />
-//   ))
-// }
