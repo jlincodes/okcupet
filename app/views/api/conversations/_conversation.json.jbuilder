@@ -1,1 +1,1 @@
-json.extract! conversation, :id, :sender_id, :recipient_id
+json.extract! conversation, :id, :sender_id, :recipient_id, :subject, :messages

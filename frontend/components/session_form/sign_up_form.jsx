@@ -10,13 +10,13 @@ class SignUpForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/users');
     }
-    // this.setState({ errors: [] });
   }
 
   handleSubmit(e) {
@@ -29,7 +29,7 @@ class SignUpForm extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
 
-  renderErrors() {
+  renderLoginErrors() {
     return(
       <ul>
         {this.props.errors.map((error,idx) => (
@@ -69,7 +69,7 @@ class SignUpForm extends React.Component {
 
               <br />
               <button className="sign-up-button" type="submit">Sign Up</button>
-              <div className="auth-errors">{this.renderErrors()}</div>
+              <div className="auth-errors">{this.renderLoginErrors()}</div>
             </form>
           </div>
         </div>

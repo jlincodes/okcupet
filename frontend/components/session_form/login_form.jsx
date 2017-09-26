@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
     });
   }
 
-  renderErrors() {
+  renderLoginErrors() {
     return(
       <ul>
         {this.props.errors.map((error,idx) => (
@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
 
             <br />
             <button className="login-form-button" type="submit">Log In</button>
-            <div className="auth-errors">{this.renderErrors()}</div>
+            <div className="auth-errors">{this.renderLoginErrors()}</div>
           </form>
         </div>
       </div>

@@ -14,12 +14,12 @@ const receiveConversation = (conversation) => ({
 
 export const fetchAllConversations = () => dispatch => (
   ConversationApiUtil.fetchAllConversations()
-    .then(resp => dispatch(receiveAllConversations()))
+    .then(resp => dispatch(receiveAllConversations(resp)))
 );
 
 export const fetchConversation = () => dispatch => (
   ConversationApiUtil.fetchConversation()
-  .then(resp => dispatch(receiveConversation()))
+  .then(resp => dispatch(receiveConversation(resp)))
 );
 
 export const createConversation = () => dispatch => (
@@ -29,5 +29,5 @@ export const createConversation = () => dispatch => (
 
 export const createMessage = () => dispatch => (
   ConversationApiUtil.createMessage()
-  .then(resp => dispatch(receiveConversation()))
+  .then(resp => dispatch(receiveConversation(resp)))
 );

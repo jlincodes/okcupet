@@ -7,27 +7,73 @@ import NavContainer from '../nav/nav_container';
 class ConversationIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      conversations: this.props.conversations };
   }
 
   componentDidMount() {
-    this.props.fetchAllConversations();
+    this.props.fetchAllUsers().then(this.props.fetchAllConversations());
   }
 
+  // console.log("convo", conversations);
+  // let sendersIds = conversations.map( conversation => (
+  //   conversation.sender_id
+  // ));
+  // console.log(sendersIds);
+
+  //
+  // {
+  //   conversations.map( (conversation, idx) => {
+  //     return (
+  //     <li>
+  //       {conversation.subject}
+  //       {users[conversation.sender_id] ?
+  //       <span>{users[conversation.sender_id].username}</span> :
+  //       <span></span>}
+  //     </li>
+  //     );
+  //   })
+  // }
+
   render() {
-    if (!this.props) {
+
+    const conversations = this.props.conversations;
+    const users = this.props.users;
+
+
+    if (conversations && users) {
+      console.log("users", users);
+      if (users[3]) {
+
+        console.log(users[3].username);
+      }
       return (
-        <div></div>
+        <div>
+          <NavContainer />
+          <h1>Messages</h1>
+            <ul className="convo-list">
+              {conversations.map((conversation, idx) => (
+                <ConversationIndexItem key={idx} conversation={conversation} users={users} />
+              ))}
+            </ul>
+
+        </div>
       );
     }
-    return (
-      <div>
-        <NavContainer />
-        <h1>messages</h1>
-      </div>
-    );
+    else {
+      return (
+        <div>
+          <h1>Loading...</h1>
+        </div>
+      );
+    }
   }
 }
 
 export default ConversationIndex;
+
+// {
+//   conversations.map((conversation, idx) => (
+//   <ConversationIndexItem
+//     key={idx}
+//     conversation={ conversation } />
+//   ))
+// }

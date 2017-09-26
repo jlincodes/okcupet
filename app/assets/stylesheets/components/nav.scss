@@ -23,6 +23,17 @@
 .nav-left {
   display: flex;
   justify-content: space-between;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.messages-link {
+  text-decoration: none;
+  color: white;
+  padding-right: 15px
 }
 
 .header-user-img {

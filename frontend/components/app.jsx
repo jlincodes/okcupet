@@ -23,10 +23,10 @@ const App = () => (
       <AuthRoute exact path="/" component={SplashPage} />
       <AuthRoute exact path="/signup" component={SplashPage} />
       <ProtectedRoute path='/users/:userId' component={UserShowContainer} />
-      <ProtectedRoute patch="/messages" component={ConversationIndexContainer} />
-      <ProtectedRoute path='/index' component={PetIndexContainer} />
       <ProtectedRoute path='/pets/:petId' component={PetShowContainer} />
-      <ProtectedRoute path='/pets' component={PetIndexContainer} />
+      // <ProtectedRoute path='/pets' component={PetIndexContainer} />
+      <ProtectedRoute path="/messages" component={ConversationIndexContainer} />
+      <ProtectedRoute path='/index' component={PetIndexContainer} />
       <Route path='/' component={() => <Redirect to='/index' />} />
     </Switch>
 

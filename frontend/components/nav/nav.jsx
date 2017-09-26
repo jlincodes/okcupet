@@ -12,12 +12,10 @@ class Nav extends React.Component {
   handleLogOut(e) {
     e.preventDefault();
     this.props.logout();
-    // .then(() => this.props.router.push("/signup"));
   }
 
   render() {
     const currentUser = this.props.currentUser;
-    // console.log("nav this.props", this.props);
     if (currentUser) {
       return(
 
@@ -29,16 +27,21 @@ class Nav extends React.Component {
               </Link>
             </div>
             <div className="nav-left">
-              <p className="header-user-img">
+              <div className="header-user-img">
                 <Link to={`/users/${currentUser.id}`}>
                   <img
                     src={currentUser.img_url}
                     alt={currentUser.username} />
                 </Link>
-              </p>
-              <p>
+              </div>
+              <div>
+                <Link to="/messages" className="messages-link">
+                  <p>Messages</p>
+                </Link>
+              </div>
+              <div>
                 <button className="session-button" onClick={this.handleLogOut}>Log Out</button>
-              </p>
+              </div>
             </div>
           </div>
         </div>

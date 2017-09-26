@@ -13,7 +13,6 @@ class PetShow extends React.Component {
     const pet = this.props.pet;
 
     if (pet) {
-      console.log(pet);
       return (
         <div>
           <NavContainer />
