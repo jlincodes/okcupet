@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router';
 
 import PetShowContainer from './pet_show_container';
 import NavContainer from '../nav/nav_container';
+import QuestionIndexContainer from '../questions/question_index_container';
 
 class PetShow extends React.Component {
   constructor(props) {
@@ -71,14 +72,19 @@ class PetShow extends React.Component {
               </div>
             </div>
             <div className="profile-body-wrapper">
+
               <div className="profile-body">
+
                 <div className="about-me">
                   <h2>Summary:</h2>
-                  <p>{pet.summary}</p>
+                  <div>{pet.summary}</div>
+                  <h2>Questions:</h2>
+                  <QuestionIndexContainer />
                 </div>
+
                 <div className="details">
                   <h2>Species:</h2>
-                  <p>{pet.animal_type}</p>
+                  <div>{pet.animal_type}</div>
                 </div>
               </div>
             </div>
