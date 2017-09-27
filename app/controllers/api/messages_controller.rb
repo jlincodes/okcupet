@@ -1,6 +1,7 @@
 class Api::MessagesController < ApplicationController
-  # def index  # do I need?
-  # end
+  def index
+    @messages = Message.where(conversation_id: message_params[:conversation_id])
+  end
   #
   # def show
   # end
