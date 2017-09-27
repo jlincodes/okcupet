@@ -1,4 +1,4 @@
-import { createMessage } from '../actions/message_actions';
+import * as MessageApiUtil from '../util/message_api_util';
 
 export const RECEIVE_MESSAGE = "RECEIVE_MESSAGE";
 
@@ -7,7 +7,7 @@ const receiveMessage = (message) => ({
   message
 });
 
-export const createConversation = (message) => dispatch => (
-  createMessage(message)
+export const createMessage = (message) => dispatch => (
+  MessageApiUtil.createMessage(message)
   .then(resp => dispatch(receiveMessage(resp)))
 );
