@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :pets, only: %i(index show create)
     resources :conversations, only: %i(index show create)
     resources :messages, only: %i(index show create)
+    resources :questions, only: %i(index show)
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
