@@ -21,6 +21,10 @@ class ConversationShow extends React.Component {
         this.props.match.params.conversationId));
   }
 
+  componentWillReceiveProps() {
+
+  }
+
   handleChange(e) {
     e.preventDefault();
     this.setState({message: e.currentTarget.value});
@@ -31,23 +35,19 @@ class ConversationShow extends React.Component {
     let currentUserId = this.props.currentUser.id;
     let currentConvoId = this.props.conversation.id;
     let body = this.state.message;
-    // console.log("curr user", currentUserId);
-    // console.log("curr convo", currentConvoId);
-    // console.log("body", body);
+
     let message = {
       author_id: currentUserId,
       conversation_id: currentConvoId,
       body: body
     };
-    console.log("message", message);
     this.props.createMessage(message)
       .then( (resp) => {
-        console.log(resp);
+        this.setState({ })
       });
   }
 
   render() {
-
     const conversation = this.props.conversation;
     const users = this.props.users;
 

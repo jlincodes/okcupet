@@ -45,7 +45,7 @@ class PetShow extends React.Component {
 
     this.props.createConversation(conversation)
     .then((resp) => {
-      this.props.router.push(`/messages/${resp.conversation.id}`);
+      this.props.history.push(`/messages/${resp.conversation.id}`);
     });
   }
 
