@@ -38,7 +38,6 @@ class SignUpForm extends React.Component {
           ))}
         </ul>
       );
-
     }
   }
 
