@@ -6,12 +6,14 @@ export const createMessage = (message) => (
   })
 );
 
-// export const fetchAllMessages = () => (
-//   $.ajax({
-//     method: 'GET',
-//     url: `/api/messages`
-//   })
-// );
+export const fetchMessages = (conversation_id) => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/messages`,
+    data: { message: { conversation_id } }
+  })
+);
+
 // export const fetchMessage = (id) => (
 //   $.ajax({
 //     method: 'GET',
