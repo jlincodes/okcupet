@@ -6,7 +6,6 @@ const ConversationShowItem = (props) => {
   const message = props.message;
   const users = props.users;
   const authorId = props.message.author_id;
-  console.log("author id:", authorId);
 
   return (
     <li className="msg-li">

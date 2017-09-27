@@ -11,7 +11,8 @@ class ConversationShow extends React.Component {
     this.state = {
       message: ""
     };
-    this.handleMessageCreate = this.handleMessageCreate.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -20,9 +21,28 @@ class ConversationShow extends React.Component {
         this.props.match.params.conversationId));
   }
 
-  handleMessageCreate(e) {
+  handleChange(e) {
     e.preventDefault();
     this.setState({message: e.currentTarget.value});
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    let currentUserId = this.props.currentUser.id;
+    let currentConvoId = this.props.conversation.id;
+    let body = this.state.message;
+    // console.log("curr user", currentUserId);
+    // console.log("curr convo", currentConvoId);
+    // console.log("body", body);
+    let message = {
+      author_id: currentUserId,
+      conversation_id: currentConvoId,
+      body: body
+    };
+    this.props.createMessage(message)
+      .then( (resp) => {
+        console.log(resp);
+      });
   }
 
   render() {
@@ -48,11 +68,16 @@ class ConversationShow extends React.Component {
             ))}
           </ul>
           <br />
-          <form
-            className="msg-form"
-            onSubmit={this.handleMessageCreate}>
-            <textarea rows="6" column="20"/>
-            <button type="submit">Send</button>
+          <form className="msg-form" onSubmit={this.handleSubmit}>
+            <textarea
+              rows="6"
+              cols="40"
+              onChange={this.handleChange}
+              value={this.state.msgInput}
+              placeholder="Write your message here!"
+              />
+            <br />
+            <button type="submit" className="msg-send-button">Send</button>
           </form>
         </div>
       );
