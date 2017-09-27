@@ -17,12 +17,8 @@ class ConversationShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllUsers()
-      .then(this.props.fetchConversation(
+      .then(this.props.fetchMessages(
         this.props.match.params.conversationId));
-  }
-
-  componentWillReceiveProps() {
-
   }
 
   handleChange(e) {
@@ -33,7 +29,7 @@ class ConversationShow extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let currentUserId = this.props.currentUser.id;
-    let currentConvoId = this.props.conversation.id;
+    let currentConvoId = this.props.messages[0].conversation_id;
     let body = this.state.message;
 
     let message = {
@@ -41,26 +37,22 @@ class ConversationShow extends React.Component {
       conversation_id: currentConvoId,
       body: body
     };
-    this.props.createMessage(message)
-      .then( (resp) => {
-        this.setState({ })
-      });
+    this.props.createMessage(message);
   }
 
   render() {
-    const conversation = this.props.conversation;
     const users = this.props.users;
-
-
-    if (conversation && users) {
-      const messages = this.props.conversation.messages;
+    const messages = this.props.messages;
+    // debugger
+    if (messages && users) {
+      const conversation = messages.length !== 0 ? this.props.messages[0].conversation.subject : null;
 
       return (
         <div>
           <NavContainer />
           <div className="msg-show">
             <h1>Message</h1>
-            <h3>{conversation.subject}</h3>
+            <h3>{conversation}</h3>
             <ul className="msg-list">
               {messages.map( (message, idx) => (
                 <ConversationShowItem
