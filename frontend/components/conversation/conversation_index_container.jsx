@@ -8,9 +8,9 @@ import { fetchAllUsers } from '../../actions/user_actions';
 const mapStateToProps = (state) => {
 
   return ({
-    conversations: Object.values(state.conversation).reverse(),
+    conversations: Object.values(state.entities.conversation).reverse(),
     currentUser: state.session.currentUser,
-    users: state.user
+    users: state.entities.user
   });
 };
 

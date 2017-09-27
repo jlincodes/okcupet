@@ -6,7 +6,7 @@ import { createConversation } from '../../actions/conversation_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return ({
-    pet: state.pets[ownProps.match.params.petId],
+    pet: state.entities.pets[ownProps.match.params.petId],
     currentUser: state.session.currentUser
   });
 };
