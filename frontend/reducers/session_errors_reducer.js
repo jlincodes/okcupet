@@ -1,4 +1,6 @@
-import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS, CLEAR_ERRORS } from '../actions/session_actions.js';
+import { RECEIVE_CURRENT_USER,
+  RECEIVE_ERRORS,
+  CLEAR_ERRORS } from '../actions/session_actions.js';
 import merge from 'lodash/merge';
 
 const _nullErrors = [];
