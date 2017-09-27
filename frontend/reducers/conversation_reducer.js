@@ -13,10 +13,6 @@ const ConversationReducer = (state = defaultState, action) => {
       return action.conversations;
     case RECEIVE_CONVERSATION:
       return merge({}, state, {[action.conversation.id]: action.conversation});
-    case RECEIVE_MESSAGE:
-      const conversation = state[action.message.conversation_id];
-      conversation.messages.push(action.message);
-      return merge({}, state, {[conversation.id]: conversation});
     default:
       return state;
   }
