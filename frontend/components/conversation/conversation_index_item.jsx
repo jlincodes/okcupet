@@ -38,5 +38,3 @@ const ConversationIndexItem = (props) => {
 };
 
 export default ConversationIndexItem;
-
-// {conversation.subject}
