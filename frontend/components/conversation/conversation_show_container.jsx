@@ -8,7 +8,8 @@ import { fetchMessages, createMessage } from '../../actions/message_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return ({
-    conversation: state.entities.conversation[ownProps.match.params.conversationId],
+    conversation: state.entities
+                  .conversation[ownProps.match.params.conversationId],
     currentUser: state.session.currentUser,
     users: state.entities.user,
     messages: Object.values(state.entities.messages)

@@ -21,6 +21,10 @@ class ConversationShow extends React.Component {
         this.props.match.params.conversationId));
   }
 
+  componentWillMount() {
+    this.props.fetchConversation(this.props.match.params.conversationId);
+  }
+
   handleChange(e) {
     e.preventDefault();
     this.setState({message: e.currentTarget.value});
@@ -29,7 +33,8 @@ class ConversationShow extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let currentUserId = this.props.currentUser.id;
-    let currentConvoId = this.props.messages[0].conversation_id;
+    let currentConvoId = this.props.conversation.id;
+
     let body = this.state.message;
 
     let message = {
