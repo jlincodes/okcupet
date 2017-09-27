@@ -1,7 +1,7 @@
 import React from 'react';
 import QuestionIndexContainer from './question_index_container';
 
-// import QuestionIndexItem from './question_index_item';
+import QuestionIndexItem from './question_index_item';
 import NavContainer from '../nav/nav_container';
 
 class QuestionIndex extends React.Component {
@@ -19,13 +19,13 @@ class QuestionIndex extends React.Component {
     if (!questions) {
       return (
         <div>
-          <h1>Loading...</h1>
+          <p>Loading...</p>
         </div>
       );
     } else {
       return (
         <div>
-          <h1>Questions</h1>
+          <p>Questions</p>
         </div>
       );
     }
