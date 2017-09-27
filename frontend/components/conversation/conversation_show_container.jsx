@@ -3,21 +3,22 @@ import ConversationShow from './conversation_show';
 
 import { fetchConversation } from '../../actions/conversation_actions';
 import { fetchAllUsers } from '../../actions/user_actions';
-import { createMessage } from '../../actions/message_actions';
+import { fetchMessages, createMessage } from '../../actions/message_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state.conversation);
   return ({
-    conversation: state.conversation[ownProps.match.params.conversationId],
+    conversation: state.entities.conversation[ownProps.match.params.conversationId],
     currentUser: state.session.currentUser,
-    users: state.user
+    users: state.entities.user,
+    messages: Object.values(state.entities.messages)
   });
 };
 
 const mapDispatchToProps = (dispatch) => ({
   fetchConversation: (id) => dispatch(fetchConversation(id)),
   fetchAllUsers: () => dispatch(fetchAllUsers()),
+  fetchMessages: (conversationId) => dispatch(fetchMessages(conversationId)),
   createMessage: (message) => dispatch(createMessage(message))
 });
 
