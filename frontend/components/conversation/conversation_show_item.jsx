@@ -11,7 +11,7 @@ const ConversationShowItem = (props) => {
     <li className="msg-li">
       {
         users[authorId] ?
-        <div className="msg-user-img">
+        <div className="msg-img-wrapper">
           <Link to={`/users/${users[authorId].id}`}>
             <img src={users[authorId].img_url}
               alt={users[authorId].username} />

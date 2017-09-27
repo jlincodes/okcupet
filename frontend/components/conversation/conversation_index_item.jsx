@@ -8,30 +8,32 @@ const ConversationIndexItem = (props) => {
   const sender = conversation.sender_id;
 
   return (
-    <li className='convo-li'>
+    <tr>
       {
         users[sender] ?
-          <div className="msg-user-img">
-            <Link to={`/users/${users[sender].id}`}>
-              <img src={users[sender].img_url}
-                alt={users[sender].username} />
-            </Link>
-          </div> : <span></span>
+          <td>
+            <div className="msg-img-wrapper">
+              <Link to={`/users/${users[sender].id}`}>
+                <img src={users[sender].img_url}
+                  alt={users[sender].username} />
+              </Link>
+            </div>
+          </td> : <span></span>
       }
       {
         users[sender] ?
-        <div>
+        <td>
           <Link to={`/users/${users[sender].id}`}>
             {users[sender].username}
           </Link>
-        </div> : <span></span>
+        </td> : <td></td>
       }
-      <div>
+      <td>
         <Link to={`/messages/${conversation.id}`}>
           {conversation.subject}
         </Link>
-      </div>
-    </li>
+      </td>
+    </tr>
   );
 };
 

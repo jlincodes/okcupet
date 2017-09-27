@@ -19,27 +19,28 @@ class ConversationIndex extends React.Component {
     const conversations = this.props.conversations;
     const users = this.props.users;
 
-    // Messages List Header?
-    // <li className='convo-li'>
-    //   <div>Sender Profile Image:</div>
-    //   <div>Sender:</div>
-    //   <div>Subject:</div>
-    // </li>
-
     if (conversations && users) {
       return (
         <div>
           <NavContainer />
-          <h1>Messages</h1>
-            <ul className="convo-list">
-              {conversations.map((conversation, idx) => (
-                <ConversationIndexItem
-                  key={idx}
-                  conversation={conversation}
-                  users={users} />
-              ))}
-            </ul>
-
+          <div className="msg-index">
+            <h1>Messages</h1>
+            <table>
+              <thead>
+                <td></td>
+                <td>Sender<br />Username</td>
+                <td>Subject</td>
+              </thead>
+              <tbody>
+                {conversations.map((conversation, idx) => (
+                  <ConversationIndexItem
+                    key={idx}
+                    conversation={conversation}
+                    users={users} />
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       );
     }

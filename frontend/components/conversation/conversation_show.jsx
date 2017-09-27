@@ -39,6 +39,7 @@ class ConversationShow extends React.Component {
       conversation_id: currentConvoId,
       body: body
     };
+    console.log("message", message);
     this.props.createMessage(message)
       .then( (resp) => {
         console.log(resp);
@@ -57,28 +58,30 @@ class ConversationShow extends React.Component {
       return (
         <div>
           <NavContainer />
-          <h1>Message</h1>
-          <h3>{conversation.subject}</h3>
-          <ul className="msg-list">
-            {messages.map( (message, idx) => (
-              <ConversationShowItem
-                key={idx}
-                message={message}
-                users={users} />
-            ))}
-          </ul>
-          <br />
-          <form className="msg-form" onSubmit={this.handleSubmit}>
-            <textarea
-              rows="6"
-              cols="40"
-              onChange={this.handleChange}
-              value={this.state.msgInput}
-              placeholder="Write your message here!"
-              />
+          <div className="msg-show">
+            <h1>Message</h1>
+            <h3>{conversation.subject}</h3>
+            <ul className="msg-list">
+              {messages.map( (message, idx) => (
+                <ConversationShowItem
+                  key={idx}
+                  message={message}
+                  users={users} />
+              ))}
+            </ul>
             <br />
-            <button type="submit" className="msg-send-button">Send</button>
-          </form>
+            <form className="msg-form" onSubmit={this.handleSubmit}>
+              <textarea
+                rows="6"
+                cols="40"
+                onChange={this.handleChange}
+                value={this.state.msgInput}
+                placeholder="Write your message here!"
+                />
+              <br />
+              <button type="submit" className="msg-send-button">Send</button>
+            </form>
+          </div>
         </div>
       );
     }
