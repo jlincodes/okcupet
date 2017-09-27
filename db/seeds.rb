@@ -114,3 +114,25 @@ Message.create!(author_id: 5, conversation_id: 10, body: Faker::RickAndMorty.quo
 Message.create!(author_id: 1, conversation_id: 10, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 5, conversation_id: 10, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 1, conversation_id: 10, body: Faker::RickAndMorty.quote)
+
+# Matching Questions:
+Question.destroy_all
+
+Question.create!(
+  user_question: "Do your household have young children?",
+  pet_question: "Are you good with young children?")
+Question.create!(
+  user_question: "Does your household have other pets?",
+  pet_question: "Are you good with other pets?")
+Question.create!(
+  user_question: "Do you live in a house",
+  pet_question: "Do you require a lot of space in your home?")
+Question.create!(
+  user_question: "Would you consider adopting a pet with special needs? (i.e. medical issues or behavior problems)",
+  pet_question: "Do you require special needs? (i.e. medications, medical treatments, behavioral training)")
+Question.create!(
+  user_question: "Have you adopted or owned a pet before?",
+  pet_question: "Do you require an experienced pet owner?")
+Question.create!(
+  user_question: "Do you enjoy long walks or outdoor activities?",
+  pet_question: "Do you enjoy long walks or outdoor activities?")
