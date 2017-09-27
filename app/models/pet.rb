@@ -9,7 +9,7 @@ class Pet < ApplicationRecord
   has_many :responses,
   primary_key: :id,
   foreign_key: :pet_id,
-  class_name: :Response
+  class_name: :PetResponse
 
   # def self.find_by_animal_type(animal_type)
   #   Pet.where('animal_type LIKE ?', animal_type)
