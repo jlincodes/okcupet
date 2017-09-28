@@ -6,8 +6,6 @@ import { fetchAllQuestions } from '../../actions/question_actions';
 // import { fetchAllResponses } from '../../actions/response_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("state", state);
-  console.log("ownProps", ownProps);
   return ({
     questions: Object.values(state.entities.questions),
     pet: state.entities.pets[ownProps.match.params.petId],
