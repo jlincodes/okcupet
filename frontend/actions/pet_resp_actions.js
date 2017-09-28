@@ -1,21 +1,21 @@
 import * as PetRespApiUtil from '../util/pet_resp_api_util';
 
-export const RECEIVE_ALL_PET_RESPONSES = "RECEIVE_ALL_PET_RESPONSES";
+export const RECEIVE_PET_RESPONSES = "RECEIVE_PET_RESPONSES";
 export const RECEIVE_PET_RESPONSE = "RECEIVE_PET_RESPONSE";
 
-const receiveAllPetResponses = (responses) => ({
-  type: RECEIVE_ALL_PET_RESPONSES,
-  responses
+const receivePetResponses = (petResponses) => ({
+  type: RECEIVE_PET_RESPONSES,
+  petResponses
 });
 
-const receivePetResponse = (response) => ({
+const receivePetResponse = (petResponse) => ({
   type: RECEIVE_PET_RESPONSE,
-  response
+  petResponse
 });
 
-export const fetchAllPetResponses = () => dispatch => (
-  PetRespApiUtil.fetchAllPetResponses()
-    .then(resp => dispatch(receiveAllPetResponses(resp)))
+export const fetchPetResponses = (petId) => dispatch => (
+  PetRespApiUtil.fetchPetResponses(petId)
+    .then(resp => dispatch(receivePetResponses(resp)))
 );
 
 export const fetchPetResponse = (id) => dispatch => (
