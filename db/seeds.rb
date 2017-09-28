@@ -119,13 +119,13 @@ Message.create!(author_id: 1, conversation_id: 10, body: Faker::RickAndMorty.quo
 Question.destroy_all
 
 Question.create!(
-  user_question: "Do your household have young children?",
+  user_question: "Does your household have young children?",
   pet_question: "Are you good with young children?")
 Question.create!(
   user_question: "Does your household have other pets?",
   pet_question: "Are you good with other pets?")
 Question.create!(
-  user_question: "Do you live in a house",
+  user_question: "Do you live in a house?",
   pet_question: "Do you require a lot of space in your home?")
 Question.create!(
   user_question: "Would you consider adopting a pet with special needs? (i.e. medical issues or behavior problems)",
@@ -136,3 +136,35 @@ Question.create!(
 Question.create!(
   user_question: "Do you enjoy long walks or outdoor activities?",
   pet_question: "Do you enjoy long walks or outdoor activities?")
+
+PetResponse.destroy_all
+# drogon
+PetResponse.create(body: "No", question_id: 1, pet_id: 1)
+PetResponse.create(body: "No", question_id: 2, pet_id: 1)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 1)
+PetResponse.create(body: "Yes", question_id: 4, pet_id: 1)
+PetResponse.create(body: "Yes", question_id: 5, pet_id: 1)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 1)
+# rhaegal
+PetResponse.create(body: "No", question_id: 1, pet_id: 2)
+PetResponse.create(body: "No", question_id: 2, pet_id: 2)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 2)
+PetResponse.create(body: "Yes", question_id: 4, pet_id: 2)
+PetResponse.create(body: "Yes", question_id: 5, pet_id: 2)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 2)
+# viserion
+PetResponse.create(body: "No", question_id: 1, pet_id: 3)
+PetResponse.create(body: "No", question_id: 2, pet_id: 3)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 3)
+PetResponse.create(body: "Yes", question_id: 4, pet_id: 3)
+PetResponse.create(body: "Yes", question_id: 5, pet_id: 3)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 3)
+
+UserResponse.destroy_all
+# demo login
+UserResponse.create(body: "No", question_id: 1, user_id: 1)
+UserResponse.create(body: "Yes", question_id: 2, user_id: 1)
+UserResponse.create(body: "No", question_id: 3, user_id: 1)
+UserResponse.create(body: "Yes", question_id: 4, user_id: 1)
+UserResponse.create(body: "No", question_id: 5, user_id: 1)
+UserResponse.create(body: "Yes", question_id: 6, user_id: 1)
