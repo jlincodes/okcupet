@@ -1,21 +1,21 @@
 import * as UserRespApiUtil from '../util/user_resp_api_util';
 
-export const RECEIVE_ALL_USER_RESPONSES = "RECEIVE_ALL_USER_RESPONSES";
+export const RECEIVE_USER_RESPONSES = "RECEIVE_USER_RESPONSES";
 export const RECEIVE_USER_RESPONSE = "RECEIVE_USER_RESPONSE";
 
-const receiveAllUserResponses = (responses) => ({
-  type: RECEIVE_ALL_USER_RESPONSES,
-  responses
+const receiveUserResponses = (userResponses) => ({
+  type: RECEIVE_USER_RESPONSES,
+  userResponses
 });
 
-const receiveUserResponse = (response) => ({
+const receiveUserResponse = (userResponse) => ({
   type: RECEIVE_USER_RESPONSE,
-  response
+  userResponse
 });
 
-export const fetchAllUserResponses = () => dispatch => (
-  UserRespApiUtil.fetchAllUserResponses()
-    .then(resp => dispatch(receiveAllUserResponses(resp)))
+export const fetchUserResponses = (userId) => dispatch => (
+  UserRespApiUtil.fetchUserResponses(userId)
+    .then(resp => dispatch(receiveUserResponses(resp)))
 );
 
 export const fetchUserResponse = (id) => dispatch => (
