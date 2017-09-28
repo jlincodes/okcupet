@@ -9,21 +9,22 @@ class QuestionIndex extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchAllQuestions()
-      // .then(this.props.fetchPetResponses(this.props.match.params.petId));
+  componentWillMount() {
+    if (this.props.pet) {
+      this.props.fetchAllQuestions()
       .then(this.props.fetchPetResponses(this.props.match.params.petId));
+    } else {
+      this.props.fetchAllQuestions()
+      .then(this.props.fetchUserResponses(this.props.match.params.userId));
+    }
   }
-
-  // componentWillMount() {
-
-  // }
 
   render() {
     const questions = this.props.questions;
     const userProfile = this.props.user;
     const petProfile = this.props.pet;
     const petResponses = this.props.petResponses;
+    const userResponses = this.props.userResponses;
 
     if (!questions) {
       return (
@@ -34,7 +35,7 @@ class QuestionIndex extends React.Component {
     } else {
       return (
         <div>
-          <ul>
+          <ul className="questions-ul">
             {
               questions.map( (question, idx) => (
                 <QuestionIndexItem
@@ -42,7 +43,8 @@ class QuestionIndex extends React.Component {
                   question={question}
                   userProfile={userProfile}
                   petProfile={petProfile}
-                  petResponse={petResponses[idx]}/>
+                  petResponse={petResponses[idx]}
+                  userResponse={userResponses[idx]}/>
               ))
             }
           </ul>
@@ -53,44 +55,3 @@ class QuestionIndex extends React.Component {
 }
 
 export default QuestionIndex;
-//
-// if (!questions) {
-//   return (
-//     <div>
-//       <p>Loading...</p>
-//     </div>
-//   );
-// } else {
-//   if (userProfile) {
-//     return (
-//       <div>
-//         <ul>
-//           {
-//             questions.map( (question, idx) => (
-//               <QuestionIndexItem
-//                 key={idx}
-//                 question={question}
-//                 userProfile={userProfile} />
-//             ))
-//           }
-//         </ul>
-//       </div>
-//     );
-//   } else {
-//     return (
-//       <div>
-//         <ul>
-//           {
-//             questions.map( (question, idx) => (
-//               <QuestionIndexItem
-//                 key={idx}
-//                 question={question}
-//                 petProfile={petProfile} />
-//             ))
-//           }
-//         </ul>
-//       </div>
-//     );
-//   }
-// }
-// }
