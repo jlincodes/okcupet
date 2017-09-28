@@ -43,7 +43,7 @@ class ConversationShow extends React.Component {
       body: body
     };
     this.props.createMessage(message);
-    this.setState({messages: ""});
+    this.setState({message: ""});
   }
 
   render() {
