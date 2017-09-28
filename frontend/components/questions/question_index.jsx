@@ -10,14 +10,20 @@ class QuestionIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllQuestions();
-      // .then(this.props.fetchAllResponses)
+    this.props.fetchAllQuestions()
+      // .then(this.props.fetchPetResponses(this.props.match.params.petId));
+      .then(this.props.fetchPetResponses(this.props.match.params.petId));
   }
+
+  // componentWillMount() {
+
+  // }
 
   render() {
     const questions = this.props.questions;
     const userProfile = this.props.user;
     const petProfile = this.props.pet;
+    const petResponses = this.props.petResponses;
 
     if (!questions) {
       return (
@@ -35,7 +41,8 @@ class QuestionIndex extends React.Component {
                   key={idx}
                   question={question}
                   userProfile={userProfile}
-                  petProfile={petProfile} />
+                  petProfile={petProfile}
+                  petResponse={petResponses[idx]}/>
               ))
             }
           </ul>
