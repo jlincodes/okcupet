@@ -1,14 +1,15 @@
-export const fetchAllPetResponses = () => (
+export const fetchPetResponses = (pet_id) => (
   $.ajax({
     method: 'GET',
-    url: `/api/pet_responses`
+    url: `api/pet_responses`,
+    data: { pet_response: { pet_id } }
   })
 );
 
 export const fetchPetResponse = (id) => (
   $.ajax({
     method: 'GET',
-    url: `/api/pet_responses/${id}`
+    url: `api/pet_responses/${id}`
   })
 );
 
@@ -20,7 +21,7 @@ export const fetchPetResponse = (id) => (
 //     data: { resp }
 //   })
 // );
-// 
+//
 // export const updatePetResponse = (resp) => (
 //   $.ajax({
 //     method: 'GET',
