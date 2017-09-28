@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import UserShowContainer from './user_show_container';
 import NavContainer from '../nav/nav_container';
+import QuestionIndexContainer from '../questions/question_index_container';
 
 class UserShow extends React.Component {
   componentDidMount() {
