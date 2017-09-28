@@ -1,14 +1,15 @@
-export const fetchAllUserResponses = () => (
+export const fetchUserResponses = (user_id) => (
   $.ajax({
     method: 'GET',
-    url: `/api/user_responses`
+    url: `api/user_responses`,
+    data: { user_response: { user_id } }
   })
 );
 
 export const fetchUserResponse = (id) => (
   $.ajax({
     method: 'GET',
-    url: `/api/user_responses/${id}`
+    url: `api/user_responses/${id}`
   })
 );
 
