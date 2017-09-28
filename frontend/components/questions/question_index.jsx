@@ -9,13 +9,17 @@ class QuestionIndex extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchAllQuestions();
       // .then(this.props.fetchAllResponses)
   }
 
   render() {
     const questions = this.props.questions;
+    const userProfile = this.props.user;
+    const petProfile = this.props.pet;
+    console.log("userProfile", this.props.user);
+    console.log(petProfile);
     if (!questions) {
       return (
         <div>
@@ -25,7 +29,17 @@ class QuestionIndex extends React.Component {
     } else {
       return (
         <div>
-          <p>Questions</p>
+          <ul>
+            {
+              questions.map( (question, idx) => (
+                <QuestionIndexItem
+                  key={idx}
+                  question={question}
+                  userProfile={userProfile}
+                  petProfile={petProfile} />
+              ))
+            }
+          </ul>
         </div>
       );
     }
@@ -33,3 +47,44 @@ class QuestionIndex extends React.Component {
 }
 
 export default QuestionIndex;
+//
+// if (!questions) {
+//   return (
+//     <div>
+//       <p>Loading...</p>
+//     </div>
+//   );
+// } else {
+//   if (userProfile) {
+//     return (
+//       <div>
+//         <ul>
+//           {
+//             questions.map( (question, idx) => (
+//               <QuestionIndexItem
+//                 key={idx}
+//                 question={question}
+//                 userProfile={userProfile} />
+//             ))
+//           }
+//         </ul>
+//       </div>
+//     );
+//   } else {
+//     return (
+//       <div>
+//         <ul>
+//           {
+//             questions.map( (question, idx) => (
+//               <QuestionIndexItem
+//                 key={idx}
+//                 question={question}
+//                 petProfile={petProfile} />
+//             ))
+//           }
+//         </ul>
+//       </div>
+//     );
+//   }
+// }
+// }
