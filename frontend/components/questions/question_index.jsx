@@ -9,7 +9,7 @@ class QuestionIndex extends React.Component {
     super(props);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchAllQuestions();
       // .then(this.props.fetchAllResponses)
   }
@@ -18,8 +18,7 @@ class QuestionIndex extends React.Component {
     const questions = this.props.questions;
     const userProfile = this.props.user;
     const petProfile = this.props.pet;
-    console.log("userProfile", this.props.user);
-    console.log(petProfile);
+
     if (!questions) {
       return (
         <div>
