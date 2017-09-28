@@ -1,7 +1,6 @@
 import {
-  RECEIVE_ALL_USER_RESPONSES,
-  RECEIVE_USER_RESPONSE
-} from '../actions/user_resp_actions';
+  RECEIVE_USER_RESPONSES,
+  RECEIVE_USER_RESPONSE } from '../actions/user_resp_actions';
 import merge from 'lodash/merge';
 
 const defaultState = {};
@@ -9,10 +8,13 @@ const defaultState = {};
 const UserResponseReducer = (state = defaultState, action) => {
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_ALL_USER_RESPONSES:
-      return action.user_responses;
+    case RECEIVE_USER_RESPONSES:
+      return action.userResponses;
     case RECEIVE_USER_RESPONSE:
-      return merge({}, state, {[action.user_response.id]: action.user_response});
+      return merge({}, state, {[action.userResponse.id]: action.userResponse});
+      // const newState = Object.assign({}, state);
+      // newState[action.userResponses.id] = action.userResponses;
+      // return newState;
     default:
       return state;
   }
