@@ -1,5 +1,5 @@
 class UserResponse < ApplicationRecord
-  validates :body
+  validates :body, presence: true
 
   belongs_to :question,
   primary_key: :id,
