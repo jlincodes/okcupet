@@ -29,8 +29,8 @@ class SignUpForm extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
 
-  renderLoginErrors() {
-    if (this.props.signUp) {
+  renderSignUpErrors() {
+    if (this.props.signIn) {
       return(
         <ul>
           {this.props.errors.map((error,idx) => (
@@ -71,7 +71,7 @@ class SignUpForm extends React.Component {
 
               <br />
               <button className="sign-up-button" type="submit">Sign Up</button>
-              <div className="auth-errors">{this.renderLoginErrors()}</div>
+              <div className="auth-errors">{this.renderSignUpErrors()}</div>
             </form>
           </div>
         </div>

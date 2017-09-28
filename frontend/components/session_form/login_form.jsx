@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
   }
 
   renderLoginErrors() {
-    if (this.props.signUp) {
+    if (this.props.loginForm) {
       return(
         <ul>
           {this.props.errors.map((error,idx) => (
