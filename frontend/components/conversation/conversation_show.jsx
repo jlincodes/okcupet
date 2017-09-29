@@ -42,7 +42,7 @@ class ConversationShow extends React.Component {
       conversation_id: currentConvoId,
       body: body
     };
-    this.props.createMessage(message);
+    this.props.createMessage(message).then(() => this.setState({message: ""}));
   }
 
   render() {
@@ -72,7 +72,7 @@ class ConversationShow extends React.Component {
                 rows="6"
                 cols="40"
                 onChange={this.handleChange}
-                value={this.state.msgInput}
+                value={this.state.message}
                 placeholder="Write your message here!"
                 />
               <br />
