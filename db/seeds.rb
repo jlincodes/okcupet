@@ -26,8 +26,8 @@ Pet.create!(name: "Morty", animal_type: "cat", age: 1, img_url: "https://vignett
 Pet.create!(name: "Summer", animal_type: "cat", age: 2, img_url: "https://vignette2.wikia.nocookie.net/animal-jam-clans-1/images/2/22/Cute-Light-Brown-Cat-1920x1200.jpg/revision/latest?cb=20161204235438", location: "San Francisco", user_id: 1, summary: "Boo-ya.")
 Pet.create!(name: "Ghost", animal_type: "dire wolf", age: 7, img_url: "https://i.pinimg.com/originals/0c/92/0d/0c920d58b210a74a75868df885160a5f.jpg", location: "Westeros", user_id: 3, summary: "*growl*")
 Pet.create!(name: "Nymeria", animal_type: "dire wolf", age: 7, img_url: "https://pixel.nymag.com/imgs/vulture/slideshows/2015/06/game-of-thrones-missing-characters/nymeria.w710.h473.jpg", location: "Westeros", user_id: 4, summary: "*growl*")
-Pet.create!(name: "Sterling Archer", animal_type: "dog", age: 4, img_url: "https://vetstreet.brightspotcdn.com/dims4/default/3e7dd32/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F8d%2Ffa82f0a80611e0a0d50050568d634f%2Ffile%2FSiberian-Husky-2-645mk062811.jpg", location: "San Francisco", user_id: 1, summary: "Phrasing! Something, something, DANGER ZONE! LANA!")
-Pet.create!(name: "Lana Kane", animal_type: "dog", age: 4, img_url: "https://i.ytimg.com/vi/oGoPUw0YBAg/maxresdefault.jpg", location: "San Francisco", user_id: 1, summary: "I don’t need a baby to validate my existence.")
+Pet.create!(name: "Sterling Archer", animal_type: "dog", age: 4, img_url: "https://vetstreet.brightspotcdn.com/dims4/default/3e7dd32/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F8d%2Ffa82f0a80611e0a0d50050568d634f%2Ffile%2FSiberian-Husky-2-645mk062811.jpg", location: "San Francisco", user_id: 5, summary: "Phrasing! Something, something, DANGER ZONE! LANA!")
+Pet.create!(name: "Lana Kane", animal_type: "dog", age: 4, img_url: "https://i.ytimg.com/vi/oGoPUw0YBAg/maxresdefault.jpg", location: "San Francisco", user_id: 5, summary: "I don’t need a baby to validate my existence.")
 
 
 Conversation.destroy_all
@@ -45,8 +45,8 @@ Conversation.create!(sender_id: 1, recipient_id: 3, subject: "Adoption inquiry f
 
 Conversation.create!(sender_id: 1, recipient_id: 4, subject: "Adoption inquiry for Nymeria")
 
-Conversation.create!(sender_id: 5, recipient_id: 1, subject: "Adoption inquiry for Sterling Archer")
-Conversation.create!(sender_id: 5, recipient_id: 1, subject: "Adoption inquiry for Lana Kane")
+Conversation.create!(sender_id: 2, recipient_id: 5, subject: "Adoption inquiry for Sterling Archer")
+Conversation.create!(sender_id: 2, recipient_id: 5, subject: "Adoption inquiry for Lana Kane")
 
 Conversation.create!(sender_id: 5, recipient_id: 2, subject: "Adoption inquiry for Drogon")
 Conversation.create!(sender_id: 5, recipient_id: 2, subject: "Adoption inquiry for Rhaegal")
@@ -103,19 +103,19 @@ Message.create!(author_id: 4, conversation_id: 8, body: Faker::RickAndMorty.quot
 Message.create!(author_id: 1, conversation_id: 8, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 4, conversation_id: 8, body: Faker::RickAndMorty.quote)
 # adoption for Sterling Archer
+Message.create!(author_id: 2, conversation_id: 9, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 5, conversation_id: 9, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 9, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 9, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 5, conversation_id: 9, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 9, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 9, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 5, conversation_id: 9, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 9, body: Faker::RickAndMorty.quote)
 # adoption for Lana Kane
+Message.create!(author_id: 2, conversation_id: 10, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 5, conversation_id: 10, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 10, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 10, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 5, conversation_id: 10, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 10, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 10, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 5, conversation_id: 10, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 10, body: Faker::RickAndMorty.quote)
 
 # adoption for Drogon
 Message.create!(author_id: 5, conversation_id: 11, body: Faker::RickAndMorty.quote)
