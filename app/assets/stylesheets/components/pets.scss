@@ -1,4 +1,13 @@
+.matches-index {
+  h1 {
+    font-family: 'Courgette', cursive;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
 .filter-wrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -38,7 +47,7 @@
   border-radius: 5px;
   border: 1px solid #f4f4f4;
   width: 280px;
-  height: 385px
+  height: 350px
 }
 
 .match-wrapper h3 {
