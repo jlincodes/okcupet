@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import PetShow from './pet_show';
 
 import { fetchPet } from '../../actions/pet_actions';
-import { createConversation } from '../../actions/conversation_actions';
+import { createConversation,
+  fetchConversation } from '../../actions/conversation_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return ({
@@ -14,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchPet: (id) => dispatch(fetchPet(id)),
   createConversation: (conversation) =>
-    dispatch(createConversation(conversation))
+    dispatch(createConversation(conversation)),
+  fetchConversation: (id) => dispatch(fetchConversation(id))
 });
 
 export default connect(
