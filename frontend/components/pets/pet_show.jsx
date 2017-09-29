@@ -38,16 +38,32 @@ class PetShow extends React.Component {
     let currentUserId = this.props.currentUser.id;
     let currentPetOwnerId = this.props.pet.user_id;
     let petName = this.props.pet.name;
+    let subject = `Adoption inquiry for ${petName}`;
     let conversation = {
       sender_id: currentUserId,
       recipient_id: currentPetOwnerId,
-      subject: `Adoption Inquiry for ${petName}`
+      subject: subject
     };
 
-    this.props.createConversation(conversation)
-    .then((resp) => {
-      this.props.history.push(`/messages/${resp.conversation.id}`);
-    });
+    // looks for current user's exisiting conversation threads
+    let currUserSent = this.props.currentUser.sent_conversations;
+    let currUserReceived = this.props.currentUser.received_conversations;
+    let currUserConversations = currUserSent.concat(currUserReceived);
+    // filters all current user's conversations for matching sender_id
+    let existingConversation = currUserConversations.filter(convo =>
+      convo.recipient_id === currentPetOwnerId && convo.subject === subject
+    );
+
+    if (existingConversation.length > 0) {
+      let convoId = existingConversation[0].id;
+      this.props.fetchConversation(convoId)
+      .then((resp) => this.props.history.push(`/messages/${resp.conversation.id}`));
+    } else {
+      this.props.createConversation(conversation)
+      .then((resp) => {
+        this.props.history.push(`/messages/${resp.conversation.id}`);
+      });
+    }
   }
 
   render() {
