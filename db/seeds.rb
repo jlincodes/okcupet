@@ -18,9 +18,6 @@ User.create!(username: 'Julie', password: 'password', email: 'julie@email.com', 
 
 Pet.destroy_all
 
-# Note: Change some pets' owner to user_id: 1 (guest) to show that 'message' button
-# doesn't render if the current user is that pet's owner
-
 Pet.create!(name: "Drogon", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/0/00/Drogon_2x10.jpg/revision/latest?cb=20160726064359", location: "Westeros", user_id: 2, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
 Pet.create!(name: "Rhaegal", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/c/c4/Rhaegal_1x10.jpg/revision/latest?cb=20160720030915", location: "Westeros", user_id: 2, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
 Pet.create!(name: "Viserion", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/d/d5/Viserion_2x10.jpg/revision/latest?cb=20160720030947", location: "Westeros", user_id: 2, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
@@ -39,6 +36,7 @@ Conversation.create!(sender_id: 3, recipient_id: 2, subject: "Adoption inquiry f
 Conversation.create!(sender_id: 3, recipient_id: 2, subject: "Adoption inquiry for Rhaegal")
 Conversation.create!(sender_id: 3, recipient_id: 2, subject: "Adoption inquiry for Viserion")
 
+
 Conversation.create!(sender_id: 5, recipient_id: 1, subject: "Adoption inquiry for Rick")
 Conversation.create!(sender_id: 5, recipient_id: 1, subject: "Adoption inquiry for Morty")
 Conversation.create!(sender_id: 5, recipient_id: 1, subject: "Adoption inquiry for Summer")
@@ -50,27 +48,31 @@ Conversation.create!(sender_id: 1, recipient_id: 4, subject: "Adoption inquiry f
 Conversation.create!(sender_id: 5, recipient_id: 1, subject: "Adoption inquiry for Sterling Archer")
 Conversation.create!(sender_id: 5, recipient_id: 1, subject: "Adoption inquiry for Lana Kane")
 
+Conversation.create!(sender_id: 5, recipient_id: 2, subject: "Adoption inquiry for Drogon")
+Conversation.create!(sender_id: 5, recipient_id: 2, subject: "Adoption inquiry for Rhaegal")
+Conversation.create!(sender_id: 5, recipient_id: 2, subject: "Adoption inquiry for Viserion")
+
 Message.destroy_all
 
 # adoption for Drogon
 Message.create!(author_id: 3, conversation_id: 1, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 1, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 1, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 3, conversation_id: 1, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 1, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 1, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 3, conversation_id: 1, body: Faker::RickAndMorty.quote)
 # adoption for Rhaegal
 Message.create!(author_id: 3, conversation_id: 2, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 2, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 2, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 3, conversation_id: 2, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 2, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 2, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 3, conversation_id: 2, body: Faker::RickAndMorty.quote)
 # adoption for Viserion
 Message.create!(author_id: 3, conversation_id: 3, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 3, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 3, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 3, conversation_id: 3, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 3, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 3, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 3, conversation_id: 3, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 1, conversation_id: 3, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 3, body: Faker::RickAndMorty.quote)
 # adoption for Rick
 Message.create!(author_id: 5, conversation_id: 4, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 1, conversation_id: 4, body: Faker::RickAndMorty.quote)
@@ -114,6 +116,26 @@ Message.create!(author_id: 5, conversation_id: 10, body: Faker::RickAndMorty.quo
 Message.create!(author_id: 1, conversation_id: 10, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 5, conversation_id: 10, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 1, conversation_id: 10, body: Faker::RickAndMorty.quote)
+
+# adoption for Drogon
+Message.create!(author_id: 3, conversation_id: 11, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 11, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 3, conversation_id: 11, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 11, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 3, conversation_id: 11, body: Faker::RickAndMorty.quote)
+# adoption for Rhaegal
+Message.create!(author_id: 3, conversation_id: 12, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 12, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 3, conversation_id: 12, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 12, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 3, conversation_id: 12, body: Faker::RickAndMorty.quote)
+# adoption for Viserion
+Message.create!(author_id: 3, conversation_id: 13, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 13, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 3, conversation_id: 13, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 13, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 3, conversation_id: 13, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 2, conversation_id: 13, body: Faker::RickAndMorty.quote)
 
 # Matching Questions:
 Question.destroy_all
@@ -159,6 +181,55 @@ PetResponse.create(body: "Yes", question_id: 3, pet_id: 3)
 PetResponse.create(body: "Yes", question_id: 4, pet_id: 3)
 PetResponse.create(body: "Yes", question_id: 5, pet_id: 3)
 PetResponse.create(body: "Yes", question_id: 6, pet_id: 3)
+# rick
+PetResponse.create(body: "No", question_id: 1, pet_id: 4)
+PetResponse.create(body: "No", question_id: 2, pet_id: 4)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 4)
+PetResponse.create(body: "Yes", question_id: 4, pet_id: 4)
+PetResponse.create(body: "Yes", question_id: 5, pet_id: 4)
+PetResponse.create(body: "No", question_id: 6, pet_id: 4)
+# morty
+PetResponse.create(body: "Yes", question_id: 1, pet_id: 5)
+PetResponse.create(body: "Yes", question_id: 2, pet_id: 5)
+PetResponse.create(body: "No", question_id: 3, pet_id: 5)
+PetResponse.create(body: "No", question_id: 4, pet_id: 5)
+PetResponse.create(body: "No", question_id: 5, pet_id: 5)
+PetResponse.create(body: "No", question_id: 6, pet_id: 5)
+# summer
+PetResponse.create(body: "Yes", question_id: 1, pet_id: 6)
+PetResponse.create(body: "Yes", question_id: 2, pet_id: 6)
+PetResponse.create(body: "No", question_id: 3, pet_id: 6)
+PetResponse.create(body: "No", question_id: 4, pet_id: 6)
+PetResponse.create(body: "No", question_id: 5, pet_id: 6)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 6)
+# Ghost
+PetResponse.create(body: "Yes", question_id: 1, pet_id: 7)
+PetResponse.create(body: "Yes", question_id: 2, pet_id: 7)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 7)
+PetResponse.create(body: "No", question_id: 4, pet_id: 7)
+PetResponse.create(body: "No", question_id: 5, pet_id: 7)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 7)
+# Nymeria
+PetResponse.create(body: "Yes", question_id: 1, pet_id: 8)
+PetResponse.create(body: "Yes", question_id: 2, pet_id: 8)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 8)
+PetResponse.create(body: "No", question_id: 4, pet_id: 8)
+PetResponse.create(body: "No", question_id: 5, pet_id: 8)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 8)
+# Archer
+PetResponse.create(body: "No", question_id: 1, pet_id: 9)
+PetResponse.create(body: "No", question_id: 2, pet_id: 9)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 9)
+PetResponse.create(body: "Yes", question_id: 4, pet_id: 9)
+PetResponse.create(body: "Yes", question_id: 5, pet_id: 9)
+PetResponse.create(body: "No", question_id: 6, pet_id: 9)
+# Lana
+PetResponse.create(body: "Yes", question_id: 1, pet_id: 10)
+PetResponse.create(body: "Yes", question_id: 2, pet_id: 10)
+PetResponse.create(body: "No", question_id: 3, pet_id: 10)
+PetResponse.create(body: "No", question_id: 4, pet_id: 10)
+PetResponse.create(body: "No", question_id: 5, pet_id: 10)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 10)
 
 UserResponse.destroy_all
 # demo login
@@ -168,3 +239,31 @@ UserResponse.create(body: "No", question_id: 3, user_id: 1)
 UserResponse.create(body: "Yes", question_id: 4, user_id: 1)
 UserResponse.create(body: "No", question_id: 5, user_id: 1)
 UserResponse.create(body: "Yes", question_id: 6, user_id: 1)
+# dany
+UserResponse.create(body: "No", question_id: 1, user_id: 2)
+UserResponse.create(body: "No", question_id: 2, user_id: 2)
+UserResponse.create(body: "Yes", question_id: 3, user_id: 2)
+UserResponse.create(body: "Yes", question_id: 4, user_id: 2)
+UserResponse.create(body: "Yes", question_id: 5, user_id: 2)
+UserResponse.create(body: "Yes", question_id: 6, user_id: 2)
+# jon
+UserResponse.create(body: "No", question_id: 1, user_id: 3)
+UserResponse.create(body: "Yes", question_id: 2, user_id: 3)
+UserResponse.create(body: "Yes", question_id: 3, user_id: 3)
+UserResponse.create(body: "Yes", question_id: 4, user_id: 3)
+UserResponse.create(body: "Yes", question_id: 5, user_id: 3)
+UserResponse.create(body: "Yes", question_id: 6, user_id: 3)
+# arya
+UserResponse.create(body: "No", question_id: 1, user_id: 4)
+UserResponse.create(body: "Yes", question_id: 2, user_id: 4)
+UserResponse.create(body: "Yes", question_id: 3, user_id: 4)
+UserResponse.create(body: "No", question_id: 4, user_id: 4)
+UserResponse.create(body: "Yes", question_id: 5, user_id: 4)
+UserResponse.create(body: "Yes", question_id: 6, user_id: 4)
+# julie
+UserResponse.create(body: "No", question_id: 1, user_id: 5)
+UserResponse.create(body: "No", question_id: 2, user_id: 5)
+UserResponse.create(body: "No", question_id: 3, user_id: 5)
+UserResponse.create(body: "Yes", question_id: 4, user_id: 5)
+UserResponse.create(body: "No", question_id: 5, user_id: 5)
+UserResponse.create(body: "Yes", question_id: 6, user_id: 5)
