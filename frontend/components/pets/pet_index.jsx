@@ -70,9 +70,11 @@ class PetIndex extends React.Component {
               Filter by location:&nbsp;
               <select className="pet-loc-dropdown"
                 onChange={this.handleSearchByLoc}>
-                <option value ="any" defaultValue>--Any--</option>
+                <option disabled selected>--Any--</option>
                 <option value="San Francisco">San Francisco</option>
                 <option value="Westeros">Westeros</option>
+                <option value="all">ALL LOCATIONS</option>
+
               </select>
 
             </div>

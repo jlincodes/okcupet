@@ -1,11 +1,9 @@
 class Api::PetsController < ApplicationController
   def index
-    if params[:query]
+    if params[:query] == "all"
+      @pets = Pet.all
+    elsif params[:query]
       @pets = Pet.find_by_location(params[:query])
-    # elsif params[:animal_type]
-    #   @pets = Pet.find_by_animal_type(params[:animal_type])
-    # elsif params[:animal_type] && params[:location]
-    #   @pets = find_by_search(params[:animal_type], params[:location])
     else
       @pets = Pet.all
     end
