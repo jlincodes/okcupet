@@ -38,7 +38,7 @@ const PostIndexItem = (props) => {
         <div className="match-info">
           <h3 className="match-name">{pet.name}</h3>
           <div className="match-age-loc">Age: {pet.age} &middot; {pet.location}</div>
-          <div className="match-percentage">{matchPercentage}%</div>
+          <div className="match-percentage"><h3>{matchPercentage}%</h3></div>
         </div>
       </div>
     </li>

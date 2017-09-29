@@ -65,7 +65,7 @@ class PetIndex extends React.Component {
         <div>
           <NavContainer />
           <div className="matches-index">
-            <h2>Here are some OK pets...</h2>
+            <h1>Welcome to OKCupet, {currentUser.username}</h1>
             <div className="filter-wrapper">
               Filter by location:&nbsp;
               <select className="pet-loc-dropdown"
