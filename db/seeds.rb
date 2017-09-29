@@ -118,23 +118,23 @@ Message.create!(author_id: 5, conversation_id: 10, body: Faker::RickAndMorty.quo
 Message.create!(author_id: 1, conversation_id: 10, body: Faker::RickAndMorty.quote)
 
 # adoption for Drogon
-Message.create!(author_id: 3, conversation_id: 11, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 5, conversation_id: 11, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 2, conversation_id: 11, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 3, conversation_id: 11, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 5, conversation_id: 11, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 2, conversation_id: 11, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 3, conversation_id: 11, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 5, conversation_id: 11, body: Faker::RickAndMorty.quote)
 # adoption for Rhaegal
-Message.create!(author_id: 3, conversation_id: 12, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 5, conversation_id: 12, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 2, conversation_id: 12, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 3, conversation_id: 12, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 5, conversation_id: 12, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 2, conversation_id: 12, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 3, conversation_id: 12, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 5, conversation_id: 12, body: Faker::RickAndMorty.quote)
 # adoption for Viserion
-Message.create!(author_id: 3, conversation_id: 13, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 5, conversation_id: 13, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 2, conversation_id: 13, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 3, conversation_id: 13, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 5, conversation_id: 13, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 2, conversation_id: 13, body: Faker::RickAndMorty.quote)
-Message.create!(author_id: 3, conversation_id: 13, body: Faker::RickAndMorty.quote)
+Message.create!(author_id: 5, conversation_id: 13, body: Faker::RickAndMorty.quote)
 Message.create!(author_id: 2, conversation_id: 13, body: Faker::RickAndMorty.quote)
 
 # Matching Questions:
