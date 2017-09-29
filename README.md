@@ -6,27 +6,24 @@ OKCupet is a full-stack web application inspired by OKCupid with a sole purpose 
 
 ![OKCupet Splash Page][splashpage]
 
-
 ## Features
-
-- User accounts with secure authentication
-- Browse pet profiles by location
-- User and pet questions to determine match compatibility
-- Message a pet's owner to inquire about adoption/receive messages from potential pet adopters
+- User accounts with secure authentication and user profiles
 
 ### Browse Pet Matches
-![Browse][browse]
+- Browse pet profiles by location
+- User and pet questions to determine match percentage compatibility
 
-### User Profile View
-![UserProfile][userprofile]
+![Browse][browse]
 
 ### Pet Profile View
 ![PetProfile][petprofile]
 
-### Messages View
+### Messages Inbox
+- Message a pet's owner to inquire about adoption/receive messages from potential pet adopters
+
 ![Messaging][messaging]
 
-### Message View
+### Message
 ![Message][message]
 
 
