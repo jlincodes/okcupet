@@ -7,7 +7,10 @@ OKCupet is a full-stack web application inspired by OKCupid with a sole purpose 
 ![OKCupet Splash Page][splashpage]
 
 ## Features
+### User profiles
 - User accounts with secure authentication and user profiles
+
+![UserProfile][userprofile]
 
 ### Browse Pet Matches
 - Browse pet profiles by location
