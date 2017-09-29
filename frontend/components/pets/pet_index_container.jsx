@@ -4,7 +4,8 @@ import PetIndex from './pet_index';
 import { fetchAllPets, searchPets } from '../../actions/pet_actions';
 
 const mapStateToProps = (state) => ({
-  pets: Object.values(state.entities.pets)
+  pets: Object.values(state.entities.pets),
+  currentUser: state.session.currentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({

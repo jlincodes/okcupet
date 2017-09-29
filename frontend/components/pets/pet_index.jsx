@@ -39,10 +39,6 @@ class PetIndex extends React.Component {
     }
   }
 
-  // <form>
-  //   <button type="submit" onClick={this.handleSearch}>Search</button>
-  // </form>
-
 
 // FILTERING BY SPECIES WORKS BUT ONLY BY ITSELF
 // FILTERING BY MULTIPLE SEARCH PARAMS BREAKS FILTERING
@@ -57,39 +53,45 @@ class PetIndex extends React.Component {
 
 
   render () {
+    const pets = this.props.pets;
+    const currentUser = this.props.currentUser;
+
     if (!this.props) {
       return (
         <div></div>
       );
-    }
-    return (
-      <div>
-        <NavContainer />
-        <div className="matches-index">
-          <h2>Here are some OK pets...</h2>
-          <div className="filter-wrapper">
-            Filter by location:&nbsp;
-            <select className="pet-loc-dropdown" onChange={this.handleSearchByLoc}>
-              <option value ="any" defaultValue>--Any--</option>
-              <option value="San Francisco">San Francisco</option>
-              <option value="Westeros">Westeros</option>
-            </select>
+    } else {
+      return (
+        <div>
+          <NavContainer />
+          <div className="matches-index">
+            <h2>Here are some OK pets...</h2>
+            <div className="filter-wrapper">
+              Filter by location:&nbsp;
+              <select className="pet-loc-dropdown"
+                onChange={this.handleSearchByLoc}>
+                <option value ="any" defaultValue>--Any--</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Westeros">Westeros</option>
+              </select>
 
-          </div>
-          <div className="pet-index">
-            <ul className="pets-list">
-              {
-                this.props.pets.map( (pet, idx) => (
-                  <PetIndexItem
-                    key={idx}
-                    pet={pet} />
-                ))
-              }
-            </ul>
+            </div>
+            <div className="pet-index">
+              <ul className="pets-list">
+                {
+                  pets.map( (pet, idx) => (
+                    <PetIndexItem
+                      key={idx}
+                      pet={pet}
+                      currentUser={currentUser} />
+                  ))
+                }
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 

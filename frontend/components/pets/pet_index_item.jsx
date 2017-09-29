@@ -3,6 +3,27 @@ import { Link, withRouter } from 'react-router-dom';
 
 const PostIndexItem = (props) => {
   const pet = props.pet;
+  const currentUser = props.currentUser;
+
+  // for matching calculations
+  let matches = 0;
+  let matchPercentage = 0;
+  let i = 0;
+  const petResponses = pet.responses;
+  const userResponses = currentUser.responses;
+
+  for (i = 0; i < petResponses.length; i ++) {
+    if (userResponses[i].body === petResponses[i].body) {
+      matches += 1;
+    }
+  }
+
+  if (matches !== 0) {
+    matchPercentage = Math.round((matches/petResponses.length)*100);
+  } else {
+    matchPercentage = 0;
+  }
+
   return (
     <li>
       <div className="match-wrapper">
@@ -17,7 +38,7 @@ const PostIndexItem = (props) => {
         <div className="match-info">
           <h3 className="match-name">{pet.name}</h3>
           <div className="match-age-loc">Age: {pet.age} &middot; {pet.location}</div>
-          <div className="match-percentage">100%</div>
+          <div className="match-percentage">{matchPercentage}%</div>
         </div>
       </div>
     </li>
