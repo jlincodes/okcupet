@@ -1,9 +1,17 @@
-.convo-list {
-  list-style: none;
-  img {
-    height: 50px;
-    width: 50px;
+.msg-index {
+  margin-left: 100px;
+  td {
+    margin: auto;
   }
+}
+
+.msgs-table {
+  width: 700px;
+  margin-bottom: 100px;
+}
+
+td {
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .msg-img-wrapper {
@@ -21,15 +29,12 @@
   }
 }
 
-.msg-index {
-  margin-left: 50px;
-  td {
-    margin: auto;
-  }
+.msgs-link {
+  text-decoration: none;
+  color: #333333;
 }
-
 .msg-show {
-  margin-left: 50px;
+  margin-left: 100px;
 }
 .msg-list {
   list-style: none;
@@ -42,4 +47,21 @@
 }
 .msg-body-wrapper {
   width: 500px;
+  margin-left: 30px;
+}
+
+.msg-form {
+  margin-left: 100px;
+  margin-bottom: 100px;
+  button {
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    padding: 0 15px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #3260c7;
+  }
 }

@@ -8,7 +8,7 @@ const ConversationIndexItem = (props) => {
   const sender = conversation.sender_id;
 
   return (
-    <tr>
+    <tr className="msgs-table-row">
       {
         users[sender] ?
           <td>
@@ -23,13 +23,15 @@ const ConversationIndexItem = (props) => {
       {
         users[sender] ?
         <td>
-          <Link to={`/users/${users[sender].id}`}>
+          <Link className="msgs-link"
+            to={`/users/${users[sender].id}`
+          }>
             {users[sender].username}
           </Link>
         </td> : <td></td>
       }
       <td>
-        <Link to={`/messages/${conversation.id}`}>
+        <Link className="msgs-link" to={`/messages/${conversation.id}`}>
           {conversation.subject}
         </Link>
       </td>

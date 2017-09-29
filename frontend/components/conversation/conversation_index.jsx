@@ -25,11 +25,11 @@ class ConversationIndex extends React.Component {
           <NavContainer />
           <div className="msg-index">
             <h1>Messages</h1>
-            <table>
+            <table className="msgs-table">
               <thead>
                 <td></td>
-                <td>Sender<br />Username</td>
-                <td>Subject</td>
+                <td>Sender Username:</td>
+                <td>Subject:</td>
               </thead>
               <tbody>
                 {conversations.map((conversation, idx) => (
