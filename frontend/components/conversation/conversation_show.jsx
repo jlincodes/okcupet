@@ -43,13 +43,12 @@ class ConversationShow extends React.Component {
       body: body
     };
     this.props.createMessage(message);
-    this.setState({message: ""});
   }
 
   render() {
     const users = this.props.users;
     const messages = this.props.messages;
-    // debugger
+
     if (messages && users) {
       const conversation = messages.length !== 0 ? this.props.messages[0].conversation.subject : null;
 
