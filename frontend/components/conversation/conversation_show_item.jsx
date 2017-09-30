@@ -6,6 +6,13 @@ const ConversationShowItem = (props) => {
   const message = props.message;
   const users = props.users;
   const authorId = props.message.author_id;
+  let userImgUrl = users[authorId].img_url;
+  console.log("before", userImgUrl);
+  if (userImgUrl === null) {
+    userImgUrl =
+    "https://www.ravensbourne.ac.uk/content/img/default-pupil-profile.png";
+  }
+  console.log("after", userImgUrl);
 
   return (
     <li className="msg-li">
@@ -13,7 +20,7 @@ const ConversationShowItem = (props) => {
         users[authorId] ?
         <div className="msg-img-wrapper">
           <Link to={`/users/${users[authorId].id}`}>
-            <img src={users[authorId].img_url}
+            <img src={userImgUrl}
               alt={users[authorId].username} />
           </Link>
         </div> : <span></span>
