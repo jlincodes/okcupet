@@ -12,10 +12,14 @@ const PostIndexItem = (props) => {
   const petResponses = pet.responses;
   const userResponses = currentUser.responses;
 
-  for (i = 0; i < petResponses.length; i ++) {
-    if (userResponses[i].body === petResponses[i].body) {
-      matches += 1;
+  if (userResponses.length > 0) {
+    for (i = 0; i < petResponses.length; i ++) {
+      if (userResponses[i].body === petResponses[i].body) {
+        matches += 1;
+      }
     }
+  } else {
+    matches = 0;
   }
 
   if (matches !== 0) {
