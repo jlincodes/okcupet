@@ -14,6 +14,13 @@ class UserShow extends React.Component {
     const user = this.props.user;
 
     if (user) {
+      let userImgUrl = this.props.user.img_url;
+
+      if (userImgUrl === null) {
+        userImgUrl =
+        "https://www.ravensbourne.ac.uk/content/img/default-pupil-profile.png";
+      }
+
       return (
         <div>
           <div><NavContainer /></div>
@@ -22,7 +29,7 @@ class UserShow extends React.Component {
             <div className="profile-header">
               <div className="profile-header-items">
                 <div className="profile-img">
-                  <img src={user.img_url}
+                  <img src={userImgUrl}
                     alt={user.username} />
                 </div>
                 <div>
