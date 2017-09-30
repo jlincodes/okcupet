@@ -10,22 +10,33 @@ const QuestionIndexItem = (props) => {
   const userResponse = props.userResponse;
 
   if (userProfile && userResponse) {
-
     return (
       <li className="question-li">
         <div className="question">{question.user_question}</div>
-        <div className="question-response">{userResponse.body}</div>
       </li>
     );
-  } if (petProfile && petResponse) {
+  } if (userProfile && !userResponse) {
+      return (
+        <li className="question-li">
+          <div className="question">{question.user_question}</div>
+          <div className="question-response">No response... yet.</div>
+        </li>
+      );
+    } if (petProfile && petResponse) {
     return (
       <li className="question-li">
         <div className="question">{question.pet_question}</div>
         <div className="question-response">{petResponse.body}</div>
       </li>
     );
-  }
-  else {
+  } if (petProfile && !petResponse) {
+    return (
+      <li className="question-li">
+        <div className="question">{question.pet_question}</div>
+        <div className="question-response">No response... yet.</div>
+      </li>
+    );
+  } else {
     return (
     <li>null</li>
     );
