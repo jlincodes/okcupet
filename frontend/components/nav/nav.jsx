@@ -17,6 +17,13 @@ class Nav extends React.Component {
   render() {
     const currentUser = this.props.currentUser;
     if (currentUser) {
+      let userImgUrl = this.props.currentUser.img_url;
+
+      if (userImgUrl === null) {
+        userImgUrl =
+        "https://www.ravensbourne.ac.uk/content/img/default-pupil-profile.png";
+      }
+
       return(
 
         <div>
@@ -30,7 +37,7 @@ class Nav extends React.Component {
               <div className="header-user-img">
                 <Link to={`/users/${currentUser.id}`}>
                   <img
-                    src={currentUser.img_url}
+                    src={userImgUrl}
                     alt={currentUser.username} />
                 </Link>
               </div>
