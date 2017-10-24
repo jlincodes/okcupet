@@ -19,15 +19,12 @@ import ConversationShowContainer
 
 const App = () => (
   <div>
-    <header>
-    </header>
-
     <Switch>
       <AuthRoute exact path="/" component={SplashPage} />
       <AuthRoute exact path="/signup" component={SplashPage} />
       <ProtectedRoute path='/users/:userId' component={UserShowContainer} />
       <ProtectedRoute path='/pets/:petId' component={PetShowContainer} />
-      <ProtectedRoute path="/messages/:conversationId" 
+      <ProtectedRoute path="/messages/:conversationId"
         component={ConversationShowContainer} />
       <ProtectedRoute path="/messages" component={ConversationIndexContainer} />
       <ProtectedRoute path='/index' component={PetIndexContainer} />
