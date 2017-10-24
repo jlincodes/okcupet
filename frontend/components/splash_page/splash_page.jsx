@@ -53,7 +53,7 @@ class SplashPage extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="splash-container">
           <div className="splash-nav-bar">
             <Link to="/" className="home-link">
               <p className="logo">okcupet!</p>
@@ -75,12 +75,14 @@ class SplashPage extends React.Component {
             >
               <LoginFormContainer />
             </Modal>
-        </div>
+          </div>
 
           <div>
             <SignUpFormContainer />
           </div>
         </div>
+
+        <div className=""></div>
       </div>
     );
   }
