@@ -12,6 +12,10 @@
   background-color: transparent;
 }
 
+.session-button:hover {
+  background-color: rgba(167, 233, 239, 0.1);
+}
+
 .login-form-wrapper {
   text-align: center;
   line-height: 15px;
@@ -50,7 +54,6 @@
   background-color: #3260c7;
 }
 
-
 .signup-form {
   color: black;
   display: flex;
@@ -87,6 +90,10 @@
   border-radius: 3px;
   color: #ffffff;
   background-color: #3260c7;
+}
+
+button:hover {
+  background-color: rgb(94, 132, 219);
 }
 
 .auth-errors {
