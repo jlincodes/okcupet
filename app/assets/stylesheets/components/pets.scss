@@ -44,7 +44,16 @@
   border-radius: 5px;
   border: 1px solid #f4f4f4;
   width: 280px;
-  height: 350px
+  height: 350px;
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+}
+
+.match-wrapper:hover {
+  border: 1px black;
+  border-style: dotted;
 }
 
 .match-wrapper h3 {
@@ -55,4 +64,8 @@
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+}
+
+img:hover {
+
 }

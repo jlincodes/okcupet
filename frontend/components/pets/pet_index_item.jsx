@@ -31,19 +31,19 @@ const PostIndexItem = (props) => {
   return (
     <li>
       <div className="match-wrapper">
-        <div>
-          <Link to={`/pets/${pet.id}`}>
-            <img
-            className="pet-img"
-            src={pet.img_url}
-            alt={pet.name} />
-          </Link>
-        </div>
-        <div className="match-info">
-          <h3 className="match-name">{pet.name}</h3>
-          <div className="match-age-loc">Age: {pet.age} &middot; {pet.location}</div>
-          <div className="match-percentage"><h3>{matchPercentage}%</h3></div>
-        </div>
+        <Link to={`/pets/${pet.id}`}>
+          <div>
+              <img
+              className="pet-img"
+              src={pet.img_url}
+              alt={pet.name} />
+          </div>
+          <div className="match-info">
+            <h3 className="match-name">{pet.name}</h3>
+            <div className="match-age-loc">Age: {pet.age} &middot; {pet.location}</div>
+            <div className="match-percentage"><h3>{matchPercentage}%</h3></div>
+          </div>
+        </Link>
       </div>
     </li>
   );
