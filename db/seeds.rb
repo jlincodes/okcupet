@@ -11,24 +11,35 @@ require 'faker'
 User.destroy_all
 
 User.create!(username: 'guest', password: 'password', email: "fakeemail0@email.com", organization: false, img_url: "https://i.pinimg.com/736x/a4/0a/d4/a40ad420a8cbab525398abb0b449d474--keep-swimming-shiba-inu.jpg", location: "San Francisco", summary: "Demo login")
-User.create!(username: 'Daenerys', password: 'password', email: 'dany@email.com', organization: true, img_url: "https://cdn.images.dailystar.co.uk/dynamic/117/photos/809000/Game-Of-Thrones-season-7-Emilia-Clarke-dragons-Daenerys-Targaryen-1009809.jpg", location: "San Francisco", summary: "I am Daenerys Stormborn of House Targaryen, of the blood of Old Valyria! I am the dragon's daughter, and I swear to you that those who would harm you will die screaming!")
+# User.create!(username: 'Daenerys', password: 'password', email: 'dany@email.com', organization: true, img_url: "http://cdn.images.dailystar.co.uk/dynamic/117/photos/809000/Game-Of-Thrones-season-7-Emilia-Clarke-dragons-Daenerys-Targaryen-1009809.jpg", location: "San Francisco", summary: "I am Daenerys Stormborn of House Targaryen, of the blood of Old Valyria! I am the dragon's daughter, and I swear to you that those who would harm you will die screaming!")
 User.create!(username: 'Jon', password: 'password', email: 'jon@email.com', organization: true, img_url: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/06/15/09/jon-snow.jpg", location: "San Francisco", summary: "King of the North!")
-User.create!(username: 'Arya', password: 'password', email: 'arya@email.com', organization: true, img_url: "https://images.cdn.starpulse.com/news/bloggers/1279398/blog_images/arya-stark.jpg", location: "San Francisco", summary: "Valar Morghulis. Tell them the north remembers...")
+# User.create!(username: 'Arya', password: 'password', email: 'arya@email.com', organization: true, img_url: "https://images.cdn.starpulse.com/news/bloggers/1279398/blog_images/arya-stark.jpg", location: "San Francisco", summary: "Valar Morghulis. Tell them the north remembers...")
 User.create!(username: 'Julie', password: 'password', email: 'julie@email.com', organization: true, img_url: "https://68.media.tumblr.com/b5b053b07750a797db50db98bf8956ac/tumblr_ogsku0OWnc1vl94c7o7_1280.jpg", location: "San Francisco", summary: "I like all the animals.")
 
 Pet.destroy_all
 
+
 # Pet.create!(name: "Drogon", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/0/00/Drogon_2x10.jpg/revision/latest?cb=20160726064359", location: "Westeros", user_id: 2, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
 # Pet.create!(name: "Rhaegal", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/c/c4/Rhaegal_1x10.jpg/revision/latest?cb=20160720030915", location: "Westeros", user_id: 2, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
 # Pet.create!(name: "Viserion", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/d/d5/Viserion_2x10.jpg/revision/latest?cb=20160720030947", location: "Westeros", user_id: 2, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
-Pet.create!(name: "Rick", animal_type: "cat", age: 5, img_url: "http://www.catster.com/wp-content/uploads/2014/08/An-albino-cat.jpg", location: "San Francisco", user_id: 1, summary: "Weddings are basically funerals with cake. I turned myself into a pickle. I'm Pickle Riiiiick.")
-Pet.create!(name: "Morty", animal_type: "cat", age: 1, img_url: "https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/a/a3/324536-cats-brown-kitten.jpg/revision/latest?cb=20161127015136", location: "San Francisco", user_id: 1, summary: "Nobody exists on purpose. Nobody belongs anywhere. We're all going to die.")
-Pet.create!(name: "Summer", animal_type: "cat", age: 2, img_url: "https://vignette2.wikia.nocookie.net/animal-jam-clans-1/images/2/22/Cute-Light-Brown-Cat-1920x1200.jpg/revision/latest?cb=20161204235438", location: "San Francisco", user_id: 1, summary: "Boo-ya.")
+Pet.create!(name: "Rick", animal_type: "cat", age: 5, img_url: "https://dncache-mauganscorp.netdna-ssl.com/thumbseg/895/895131-bigthumbnail.jpg", location: "San Francisco", user_id: 3, summary: "Weddings are basically funerals with cake. I turned myself into a pickle. I'm Pickle Riiiiick.")
+Pet.create!(name: "Morty", animal_type: "cat", age: 1, img_url: "https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/a/a3/324536-cats-brown-kitten.jpg/revision/latest?cb=20161127015136", location: "San Francisco", user_id: 3, summary: "Nobody exists on purpose. Nobody belongs anywhere. We're all going to die.")
+Pet.create!(name: "Summer", animal_type: "cat", age: 2, img_url: "https://vignette2.wikia.nocookie.net/animal-jam-clans-1/images/2/22/Cute-Light-Brown-Cat-1920x1200.jpg/revision/latest?cb=20161204235438", location: "San Francisco", user_id: 3, summary: "Boo-ya.")
 Pet.create!(name: "Ghost", animal_type: "dire wolf", age: 7, img_url: "https://i.pinimg.com/originals/0c/92/0d/0c920d58b210a74a75868df885160a5f.jpg", location: "Westeros", user_id: 3, summary: "*growl*")
-Pet.create!(name: "Nymeria", animal_type: "dire wolf", age: 7, img_url: "https://pixel.nymag.com/imgs/vulture/slideshows/2015/06/game-of-thrones-missing-characters/nymeria.w710.h473.jpg", location: "Westeros", user_id: 4, summary: "*growl*")
-Pet.create!(name: "Sterling Archer", animal_type: "dog", age: 2, img_url: "https://vetstreet.brightspotcdn.com/dims4/default/3e7dd32/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F8d%2Ffa82f0a80611e0a0d50050568d634f%2Ffile%2FSiberian-Husky-2-645mk062811.jpg", location: "San Francisco", user_id: 5, summary: "Phrasing! Something, something, DANGER ZONE! LANA!")
-Pet.create!(name: "Lana Kane", animal_type: "dog", age: 1, img_url: "https://i.ytimg.com/vi/oGoPUw0YBAg/maxresdefault.jpg", location: "San Francisco", user_id: 5, summary: "I don’t need a baby to validate my existence.")
+# Pet.create!(name: "Nymeria", animal_type: "dire wolf", age: 7, img_url: "https://pixel.nymag.com/imgs/vulture/slideshows/2015/06/game-of-thrones-missing-characters/nymeria.w710.h473.jpg", location: "Westeros", user_id: 4, summary: "*growl*")
+Pet.create!(name: "Sterling Archer", animal_type: "dog", age: 2, img_url: "https://vetstreet.brightspotcdn.com/dims4/default/3e7dd32/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F8d%2Ffa82f0a80611e0a0d50050568d634f%2Ffile%2FSiberian-Husky-2-645mk062811.jpg", location: "San Francisco", user_id: 3, summary: "Phrasing! Something, something, DANGER ZONE! LANA!")
+Pet.create!(name: "Lana Kane", animal_type: "dog", age: 1, img_url: "https://i.ytimg.com/vi/oGoPUw0YBAg/maxresdefault.jpg", location: "San Francisco", user_id: 3, summary: "I don’t need a baby to validate my existence.")
 
+Conversation.destroy_all
+
+Conversation.create!(sender_id: 1, recipient_id: 3, subject: "Adoption inquiry for Morty")
+
+Message.destroy_all
+
+# adoption for Morty
+Message.create!(author_id: 1, conversation_id: 1, body: "Hi, is Morty still available for adoption?")
+Message.create!(author_id: 3, conversation_id: 1, body: "Hi, guest, yes he is!")
+Message.create!(author_id: 1, conversation_id: 1, body: "Great! When would be a good time to meet? I'd love to meet Morty in person")
 
 # Matching Questions:
 Question.destroy_all
