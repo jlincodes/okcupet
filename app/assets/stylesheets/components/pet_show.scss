@@ -42,10 +42,9 @@
   border-radius: 50%;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   img {
-    width: 100%;
-    position: relative;
+    height: 100%;
   }
 }
 .profile-body-wrapper {
