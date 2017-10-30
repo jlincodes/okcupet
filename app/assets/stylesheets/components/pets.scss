@@ -32,13 +32,17 @@
   float: left;
 }
 
-.pet-img {
-  position: relative;
-  width: 100%;
+.pet-img-wrapper {
   height: 220px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  overflow: hidden;
+  align-content: center;
+  .pet-img {
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
 }
+
 
 .match-wrapper {
   border-radius: 5px;

@@ -32,7 +32,7 @@ const PostIndexItem = (props) => {
     <li>
       <div className="match-wrapper">
         <Link to={`/pets/${pet.id}`}>
-          <div>
+          <div className='pet-img-wrapper'>
               <img
               className="pet-img"
               src={pet.img_url}
