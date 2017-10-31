@@ -13,6 +13,7 @@ const QuestionIndexItem = (props) => {
     return (
       <li className="question-li">
         <div className="question">{question.user_question}</div>
+        <div className="question-response">{userResponse.body}</div>
       </li>
     );
   } if (userProfile && !userResponse) {
