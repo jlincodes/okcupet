@@ -27,9 +27,11 @@ class ConversationIndex extends React.Component {
             <h1>Messages</h1>
             <table className="msgs-table">
               <thead>
-                <td></td>
-                <td>Sender Username:</td>
-                <td>Subject:</td>
+                <tr>
+                  <th></th>
+                  <th>Sender Username:</th>
+                  <th>Subject:</th>
+                </tr>
               </thead>
               <tbody>
                 {conversations.map((conversation, idx) => (
