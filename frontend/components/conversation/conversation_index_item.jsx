@@ -18,7 +18,7 @@ const ConversationIndexItem = (props) => {
                   alt={users[sender].username} />
               </Link>
             </div>
-          </td> : <span></span>
+          </td> : <td></td>
       }
       {
         users[sender] ?

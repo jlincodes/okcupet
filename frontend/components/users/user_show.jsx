@@ -16,11 +16,6 @@ class UserShow extends React.Component {
     if (user) {
       let userImgUrl = this.props.user.img_url;
 
-      if (userImgUrl === null) {
-        userImgUrl =
-        "https://www.ravensbourne.ac.uk/content/img/default-pupil-profile.png";
-      }
-
       return (
         <div>
           <div><NavContainer /></div>

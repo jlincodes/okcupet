@@ -19,11 +19,6 @@ class Nav extends React.Component {
     if (currentUser) {
       let userImgUrl = this.props.currentUser.img_url;
 
-      if (userImgUrl === null) {
-        userImgUrl =
-        "https://www.ravensbourne.ac.uk/content/img/default-pupil-profile.png";
-      }
-
       return(
 
         <div>
