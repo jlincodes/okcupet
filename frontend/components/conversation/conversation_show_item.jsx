@@ -7,12 +7,10 @@ const ConversationShowItem = (props) => {
   const users = props.users;
   const authorId = props.message.author_id;
   let userImgUrl = users[authorId].img_url;
-  console.log("before", userImgUrl);
   if (userImgUrl === null) {
     userImgUrl =
     "https://www.ravensbourne.ac.uk/content/img/default-pupil-profile.png";
   }
-  console.log("after", userImgUrl);
 
   return (
     <li className="msg-li">
