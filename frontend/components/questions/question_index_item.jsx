@@ -12,14 +12,14 @@ const QuestionIndexItem = (props) => {
   if (userProfile && userResponse) {
     return (
       <li className="question-li">
-        <div className="question">{question.user_question}</div>
+        <h3 className="question">{question.user_question}</h3>
         <div className="question-response">{userResponse.body}</div>
       </li>
     );
   } if (userProfile && !userResponse) {
       return (
         <li className="question-li">
-          <div className="question">{question.user_question}</div>
+          <h3 className="question">{question.user_question}</h3>
           <div className="question-response">No response... yet.</div>
         </li>
       );
