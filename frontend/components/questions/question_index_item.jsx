@@ -26,14 +26,14 @@ const QuestionIndexItem = (props) => {
     } if (petProfile && petResponse) {
     return (
       <li className="question-li">
-        <div className="question">{question.pet_question}</div>
+        <h3 className="question">{question.pet_question}</h3>
         <div className="question-response">{petResponse.body}</div>
       </li>
     );
   } if (petProfile && !petResponse) {
     return (
       <li className="question-li">
-        <div className="question">{question.pet_question}</div>
+        <h3 className="question">{question.pet_question}</h3>
         <div className="question-response">No response... yet.</div>
       </li>
     );
