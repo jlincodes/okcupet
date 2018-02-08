@@ -38,13 +38,13 @@ Pet.create!(name: "Rhaegal", animal_type: "dragon", age: 1, img_url: "https://vi
 
 Conversation.destroy_all
 
-Conversation.create!(sender_id: 1, recipient_id: 3, subject: "Adoption inquiry for Morty")
+Conversation.create!(sender_id: 1, recipient_id: 2, subject: "Adoption inquiry for Morty")
 
 Message.destroy_all
 
 # adoption for Morty
 Message.create!(author_id: 1, conversation_id: 1, body: "Hi, is Morty still available for adoption?")
-Message.create!(author_id: 3, conversation_id: 1, body: "Hi, guest, yes he is!")
+Message.create!(author_id: 2, conversation_id: 1, body: "Hi, guest, yes he is!")
 Message.create!(author_id: 1, conversation_id: 1, body: "Great! When would be a good time to meet? I'd love to meet Morty in person")
 
 # Matching Questions:
@@ -70,27 +70,6 @@ Question.create!(
   pet_question: "Do you enjoy long walks or outdoor activities?")
 
 PetResponse.destroy_all
-# drogon
-# PetResponse.create(body: "No", question_id: 1, pet_id: 1)
-# PetResponse.create(body: "No", question_id: 2, pet_id: 1)
-# PetResponse.create(body: "Yes", question_id: 3, pet_id: 1)
-# PetResponse.create(body: "Yes", question_id: 4, pet_id: 1)
-# PetResponse.create(body: "Yes", question_id: 5, pet_id: 1)
-# PetResponse.create(body: "Yes", question_id: 6, pet_id: 1)
-# # rhaegal
-# PetResponse.create(body: "No", question_id: 1, pet_id: 2)
-# PetResponse.create(body: "No", question_id: 2, pet_id: 2)
-# PetResponse.create(body: "Yes", question_id: 3, pet_id: 2)
-# PetResponse.create(body: "Yes", question_id: 4, pet_id: 2)
-# PetResponse.create(body: "Yes", question_id: 5, pet_id: 2)
-# PetResponse.create(body: "Yes", question_id: 6, pet_id: 2)
-# # viserion
-# PetResponse.create(body: "No", question_id: 1, pet_id: 3)
-# PetResponse.create(body: "No", question_id: 2, pet_id: 3)
-# PetResponse.create(body: "Yes", question_id: 3, pet_id: 3)
-# PetResponse.create(body: "Yes", question_id: 4, pet_id: 3)
-# PetResponse.create(body: "Yes", question_id: 5, pet_id: 3)
-# PetResponse.create(body: "Yes", question_id: 6, pet_id: 3)
 # rick
 PetResponse.create(body: "No", question_id: 1, pet_id: 1)
 PetResponse.create(body: "No", question_id: 2, pet_id: 1)
@@ -112,34 +91,60 @@ PetResponse.create(body: "No", question_id: 3, pet_id: 3)
 PetResponse.create(body: "No", question_id: 4, pet_id: 3)
 PetResponse.create(body: "No", question_id: 5, pet_id: 3)
 PetResponse.create(body: "Yes", question_id: 6, pet_id: 3)
-# Ghost
-PetResponse.create(body: "Yes", question_id: 1, pet_id: 4)
-PetResponse.create(body: "Yes", question_id: 2, pet_id: 4)
-PetResponse.create(body: "Yes", question_id: 3, pet_id: 4)
-PetResponse.create(body: "No", question_id: 4, pet_id: 4)
-PetResponse.create(body: "No", question_id: 5, pet_id: 4)
-PetResponse.create(body: "Yes", question_id: 6, pet_id: 4)
-# Nymeria
-# PetResponse.create(body: "Yes", question_id: 1, pet_id: 5)
-# PetResponse.create(body: "Yes", question_id: 2, pet_id: 5)
-# PetResponse.create(body: "Yes", question_id: 3, pet_id: 5)
-# PetResponse.create(body: "No", question_id: 4, pet_id: 5)
-# PetResponse.create(body: "No", question_id: 5, pet_id: 5)
-# PetResponse.create(body: "Yes", question_id: 6, pet_id: 5)
 # Archer
-PetResponse.create(body: "No", question_id: 1, pet_id: 5)
-PetResponse.create(body: "No", question_id: 2, pet_id: 5)
-PetResponse.create(body: "Yes", question_id: 3, pet_id: 5)
-PetResponse.create(body: "Yes", question_id: 4, pet_id: 5)
-PetResponse.create(body: "Yes", question_id: 5, pet_id: 5)
-PetResponse.create(body: "No", question_id: 6, pet_id: 5)
+PetResponse.create(body: "No", question_id: 1, pet_id: 4)
+PetResponse.create(body: "No", question_id: 2, pet_id: 4)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 4)
+PetResponse.create(body: "Yes", question_id: 4, pet_id: 4)
+PetResponse.create(body: "Yes", question_id: 5, pet_id: 4)
+PetResponse.create(body: "No", question_id: 6, pet_id: 4)
 # Lana
+PetResponse.create(body: "Yes", question_id: 1, pet_id: 5)
+PetResponse.create(body: "Yes", question_id: 2, pet_id: 5)
+PetResponse.create(body: "No", question_id: 3, pet_id: 5)
+PetResponse.create(body: "No", question_id: 4, pet_id: 5)
+PetResponse.create(body: "No", question_id: 5, pet_id: 5)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 5)
+# Ghost
 PetResponse.create(body: "Yes", question_id: 1, pet_id: 6)
 PetResponse.create(body: "Yes", question_id: 2, pet_id: 6)
-PetResponse.create(body: "No", question_id: 3, pet_id: 6)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 6)
 PetResponse.create(body: "No", question_id: 4, pet_id: 6)
 PetResponse.create(body: "No", question_id: 5, pet_id: 6)
 PetResponse.create(body: "Yes", question_id: 6, pet_id: 6)
+
+
+
+# Nymeria
+PetResponse.create(body: "Yes", question_id: 1, pet_id: 7)
+PetResponse.create(body: "Yes", question_id: 2, pet_id: 7)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 7)
+PetResponse.create(body: "No", question_id: 4, pet_id: 7)
+PetResponse.create(body: "No", question_id: 5, pet_id: 7)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 7)
+
+# drogon
+PetResponse.create(body: "No", question_id: 1, pet_id: 8)
+PetResponse.create(body: "No", question_id: 2, pet_id: 8)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 8)
+PetResponse.create(body: "Yes", question_id: 4, pet_id: 8)
+PetResponse.create(body: "Yes", question_id: 5, pet_id: 8)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 8)
+# # rhaegal
+PetResponse.create(body: "No", question_id: 1, pet_id: 9)
+PetResponse.create(body: "No", question_id: 2, pet_id: 9)
+PetResponse.create(body: "Yes", question_id: 3, pet_id: 9)
+PetResponse.create(body: "Yes", question_id: 4, pet_id: 9)
+PetResponse.create(body: "Yes", question_id: 5, pet_id: 9)
+PetResponse.create(body: "Yes", question_id: 6, pet_id: 9)
+# # viserion
+# PetResponse.create(body: "No", question_id: 1, pet_id: 3)
+# PetResponse.create(body: "No", question_id: 2, pet_id: 3)
+# PetResponse.create(body: "Yes", question_id: 3, pet_id: 3)
+# PetResponse.create(body: "Yes", question_id: 4, pet_id: 3)
+# PetResponse.create(body: "Yes", question_id: 5, pet_id: 3)
+# PetResponse.create(body: "Yes", question_id: 6, pet_id: 3)
+
 
 UserResponse.destroy_all
 # demo login
@@ -149,31 +154,31 @@ UserResponse.create(body: "No", question_id: 3, user_id: 1)
 UserResponse.create(body: "Yes", question_id: 4, user_id: 1)
 UserResponse.create(body: "No", question_id: 5, user_id: 1)
 UserResponse.create(body: "Yes", question_id: 6, user_id: 1)
-# # dany
-# UserResponse.create(body: "No", question_id: 1, user_id: 2)
-# UserResponse.create(body: "No", question_id: 2, user_id: 2)
-# UserResponse.create(body: "Yes", question_id: 3, user_id: 2)
-# UserResponse.create(body: "Yes", question_id: 4, user_id: 2)
-# UserResponse.create(body: "Yes", question_id: 5, user_id: 2)
-# UserResponse.create(body: "Yes", question_id: 6, user_id: 2)
 # jon
-UserResponse.create(body: "No", question_id: 1, user_id: 2)
-UserResponse.create(body: "Yes", question_id: 2, user_id: 2)
-UserResponse.create(body: "Yes", question_id: 3, user_id: 2)
-UserResponse.create(body: "Yes", question_id: 4, user_id: 2)
-UserResponse.create(body: "Yes", question_id: 5, user_id: 2)
-UserResponse.create(body: "Yes", question_id: 6, user_id: 2)
+UserResponse.create(body: "No", question_id: 1, user_id: 4)
+UserResponse.create(body: "Yes", question_id: 2, user_id: 4)
+UserResponse.create(body: "Yes", question_id: 3, user_id: 4)
+UserResponse.create(body: "Yes", question_id: 4, user_id: 4)
+UserResponse.create(body: "Yes", question_id: 5, user_id: 4)
+UserResponse.create(body: "Yes", question_id: 6, user_id: 4)
+# # dany
+UserResponse.create(body: "No", question_id: 1, user_id: 5)
+UserResponse.create(body: "No", question_id: 2, user_id: 5)
+UserResponse.create(body: "Yes", question_id: 3, user_id: 5)
+UserResponse.create(body: "Yes", question_id: 4, user_id: 5)
+UserResponse.create(body: "Yes", question_id: 5, user_id: 5)
+UserResponse.create(body: "Yes", question_id: 6, user_id: 5)
 # # arya
-# UserResponse.create(body: "No", question_id: 1, user_id: 4)
-# UserResponse.create(body: "Yes", question_id: 2, user_id: 4)
-# UserResponse.create(body: "Yes", question_id: 3, user_id: 4)
-# UserResponse.create(body: "No", question_id: 4, user_id: 4)
-# UserResponse.create(body: "Yes", question_id: 5, user_id: 4)
-# UserResponse.create(body: "Yes", question_id: 6, user_id: 4)
-# julie
 UserResponse.create(body: "No", question_id: 1, user_id: 3)
-UserResponse.create(body: "No", question_id: 2, user_id: 3)
-UserResponse.create(body: "No", question_id: 3, user_id: 3)
-UserResponse.create(body: "Yes", question_id: 4, user_id: 3)
-UserResponse.create(body: "No", question_id: 5, user_id: 3)
+UserResponse.create(body: "Yes", question_id: 2, user_id: 3)
+UserResponse.create(body: "Yes", question_id: 3, user_id: 3)
+UserResponse.create(body: "No", question_id: 4, user_id: 3)
+UserResponse.create(body: "Yes", question_id: 5, user_id: 3)
 UserResponse.create(body: "Yes", question_id: 6, user_id: 3)
+# julie
+UserResponse.create(body: "No", question_id: 1, user_id: 2)
+UserResponse.create(body: "No", question_id: 2, user_id: 2)
+UserResponse.create(body: "No", question_id: 3, user_id: 2)
+UserResponse.create(body: "Yes", question_id: 4, user_id: 2)
+UserResponse.create(body: "No", question_id: 5, user_id: 2)
+UserResponse.create(body: "Yes", question_id: 6, user_id: 2)
