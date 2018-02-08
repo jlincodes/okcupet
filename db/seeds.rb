@@ -34,7 +34,7 @@ Pet.create!(name: "Ghost", animal_type: "dire wolf", age: 7, img_url: "https://i
 Pet.create!(name: "Nymeria", animal_type: "dire wolf", age: 7, img_url: "https://pixel.nymag.com/imgs/vulture/slideshows/2015/06/game-of-thrones-missing-characters/nymeria.w710.h473.jpg", location: "Westeros", user_id: 3, summary: "*growl*")
 Pet.create!(name: "Drogon", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/0/00/Drogon_2x10.jpg/revision/latest?cb=20160726064359", location: "Westeros", user_id: 5, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
 Pet.create!(name: "Rhaegal", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/c/c4/Rhaegal_1x10.jpg/revision/latest?cb=20160720030915", location: "Westeros", user_id: 5, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
-Pet.create!(name: "Viserion", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/d/d5/Viserion_2x10.jpg/revision/latest?cb=20160720030947", location: "Westeros", user_id: 5, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
+# Pet.create!(name: "Viserion", animal_type: "dragon", age: 1, img_url: "https://vignette.wikia.nocookie.net/gameofthrones/images/d/d5/Viserion_2x10.jpg/revision/latest?cb=20160720030947", location: "Westeros", user_id: 5, summary: "Cute but dangerous. Doesn't like raw meat; only meat cooked in the fire that I breath.")
 
 Conversation.destroy_all
 
