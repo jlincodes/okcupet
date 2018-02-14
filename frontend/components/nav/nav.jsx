@@ -42,7 +42,7 @@ class Nav extends React.Component {
                 </Link>
               </div>
               <div>
-                <button className="session-button" onClick={this.handleLogOut}>Log Out</button>
+                <button className="light-blue-btn" onClick={this.handleLogOut}>Log Out</button>
               </div>
             </div>
           </div>
