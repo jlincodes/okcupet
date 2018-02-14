@@ -60,9 +60,9 @@ class SplashPage extends React.Component {
             </Link>
             <p className="auth">
               Already a member?&nbsp;
-              <button className="session-button" onClick={ this.openModal }>
+              <button className="light-blue-btn" onClick={ this.openModal }>
                 Log In</button>&nbsp;
-              <button className="session-button" onClick={ this.handleGuest }>
+              <button className="light-blue-btn" onClick={ this.handleGuest }>
                 Demo</button>
             </p>
 
