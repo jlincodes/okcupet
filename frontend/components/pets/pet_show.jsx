@@ -28,7 +28,7 @@ class PetShow extends React.Component {
         <div>
           <button
             className='light-blue-btn msg-btn'
-            onClick={this.handleMessage}>Message</button>
+            onClick={this.handleMessage}>Send Message</button>
         </div>
       );
     }
