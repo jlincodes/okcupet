@@ -49,3 +49,6 @@ Currently, OKCupet is only a minimum viable product. To make OKCupet a fully fun
 [userprofile]: https://github.com/julielin0812/okcupet/blob/master/docs/screenshots/user-profile.png?raw=true
 [messaging]: https://github.com/julielin0812/okcupet/blob/master/docs/screenshots/messages.png?raw=true
 [message]: https://github.com/julielin0812/okcupet/blob/master/docs/screenshots/message.png?raw=true
+
+
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
