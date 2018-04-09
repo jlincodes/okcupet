@@ -11,5 +11,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export const configureStore = (preloadedState = {}) => (
-  createStore(RootReducer, preloadedState, applyMiddleware(...middlewares))
+  createStore(
+    RootReducer,
+    preloadedState,
+    applyMiddleware(...middlewares))
 );

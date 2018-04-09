@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { configureStore } from './store/store';
+import configureStore from './store/store';
 import Root from './components/root';
 import { signup, login, logout } from './actions/session_actions';
 import { searchPets } from './actions/pet_actions';
@@ -17,14 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+
   // Testing start
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.login = login;
-  window.logout = logout;
-  window.signup = signup;
-  window.searchPets = searchPets;
-  window.createConversation = createConversation;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
+  // window.login = login;
+  // window.logout = logout;
+  // window.signup = signup;
+  // window.searchPets = searchPets;
+  // window.createConversation = createConversation;
   // Testing end
   const root = document.getElementById('root');
 
