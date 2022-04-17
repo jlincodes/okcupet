@@ -1,6 +1,6 @@
 # What is OKCupet?
 
-Have you ever considered adopting a pet and been overwhelmed by the sheer number of pets available for adoption? Or maybe you've felt underwhelmed by the lack of information on said adoptable pets. Enter [OKCupet](https://okcupet.herokuapp.com/#/).
+Have you ever considered adopting a pet and been overwhelmed by the sheer number of pets available for adoption? Or maybe you've felt underwhelmed by the lack of information on said adoptable pets. Enter OKCupet.
 
 OKCupet is a full-stack web application inspired by OKCupid with a sole purpose of matching potential pet parents with adoptable pets.
 
